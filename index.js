@@ -1,9 +1,10 @@
 'use strict';
 
 var ReactDOM = require('react-dom');
-var Home = require('./js/home');
+
+const App = require('./js/App');
 
 ReactDOM.render(
-  <Home />,
+  <App />,
   document.getElementById('container')
 );

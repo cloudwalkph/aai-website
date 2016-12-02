@@ -1,0 +1,20 @@
+html {
+    font-family: GillSans, Calibri, Trebuchet, sans-serif;
+}
+
+/* Sticky Footer */
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+/* */
+
+p {
+    text-align: justify;
+    text-justify: inter-word;
+}
