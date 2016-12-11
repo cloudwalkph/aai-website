@@ -3,7 +3,7 @@ html {
 }
 
 /* Sticky Footer */
-body {
+div[data-reactroot] {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -14,7 +14,96 @@ main {
 }
 /* */
 
-p {
-    text-align: justify;
-    text-justify: inter-word;
+/* aai font-faces */
+
+@font-face {
+  font-family: "Gotham Book";
+  src: local(Gotham Book), url("./fonts/gotham_book.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
 }
+
+@font-face {
+  font-family: "Gotham Light";
+  src: local(Gotham Light), url("./fonts/gotham_light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gotham Medium";
+  src: local(Gotham Medium), url("./fonts/gotham_medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Moon Bold";
+  src: local(Moon), url("./fonts/moon_bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Norwester";
+  src: local(Norwester), url("./fonts/norwester.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* custom styles */
+
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+    font-family: 'Norwester';
+}
+
+p, li, nav a {
+    font-family: 'Gotham Book';
+}
+
+.slider p {
+    font-family: 'Gotham Light'
+}
+
+a {
+    font-family: 'Moon Bold'
+}
+
+strong {
+    font-weight: 700;
+}
+
+.parallax-container {
+    height: 500px;
+}
+
+.text_engrave {
+    text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0,0,0,.7)
+}
+
+svg {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+path {
+    fill: #757575;
+}
+
+.footer-copyright {
+    display: -webkit-flex; /* Safari */  
+    display: flex;
+    -webkit-align-items: center; /* Safari 7.0+ */
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.footer_icon {
+    vertical-align: center;
+}
+
+
+        

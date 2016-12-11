@@ -34,9 +34,9 @@ var App = React.createClass({
         };
     },
 
-    getPage(page) {
+    getPage(e) {
         this.setState({
-            page: page
+            page: e.target.name
         })
     },
 
@@ -46,7 +46,7 @@ var App = React.createClass({
                 <header>
                     <Menu getPage={this.getPage} />
                 </header>
-
+                    
                 <main>
                     { this.state.page == 'home' ? <Home getPage={this.getPage} /> : '' }
                     { this.state.page == 'services' ? <Services getPage={this.getPage} /> : '' }
