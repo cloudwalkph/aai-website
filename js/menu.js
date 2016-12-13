@@ -89,8 +89,8 @@ const NavBar = React.createClass({
         });
     },
     
-    selectMenu(e) {
-        this.props.getPage(e);
+    selectMenu(page) {
+        this.props.getPage(page);
     },
 
     render() {
@@ -99,8 +99,8 @@ const NavBar = React.createClass({
                 <div className="navbar-fixed">
                     <nav className="white z-depth-0">
                         <div className="nav-wrapper container">
-                            <a name="home" className="brand-logo" onClick={this.selectMenu}>
-                                <img name="home" className="responsive-img" src="img/logo.png" />
+                            <a className="brand-logo" onClick={this.selectMenu.bind(this, 'home')}>
+                                <img className="responsive-img" src="img/logo.png" />
                             </a>
                             <a data-activates="slide-out" className="button-collapse">
                                 <i className="material-icons grey-text text-darken-3">menu</i>
@@ -111,9 +111,8 @@ const NavBar = React.createClass({
                                         return(
                                             <li key={v.id} className={v.active}>
                                                 <a 
-                                                    className={v.class} 
-                                                    name={v.id} 
-                                                    onClick={this.selectMenu}
+                                                    className={v.class}
+                                                    onClick={this.selectMenu.bind(this, v.id)}
                                                     data-activates="services-dropdown"
                                                     data-hover="true"
                                                     data-constrainwidth="false"
@@ -126,8 +125,7 @@ const NavBar = React.createClass({
                                             <li key={v.id} className={v.active}>
                                                 <a 
                                                     className={v.class} 
-                                                    name={v.id} 
-                                                    onClick={this.selectMenu}
+                                                    onClick={this.selectMenu.bind(this, v.id)}
                                                 >{v.page}</a>
                                             </li>
                                         )
@@ -159,7 +157,7 @@ const NavBar = React.createClass({
                                                     { this.state.servicesData.map(function(vSd, iSd){
                                                         return(
                                                             <li key={vSd.id}>
-                                                                <a href="#!" name={vSd.id} onClick={this.selectMenu}>{vSd.page}</a>
+                                                                <a href="#!" onClick={this.selectMenu.bind(this, vSd.id)}>{vSd.page}</a>
                                                             </li>
                                                         )
                                                     }.bind(this))}
@@ -173,9 +171,8 @@ const NavBar = React.createClass({
                             return(
                                 <li key={v.id} className={v.active}>
                                     <a 
-                                        className="waves-effect grey-text text-darken-3" 
-                                        name={v.id} 
-                                        onClick={this.selectMenu}
+                                        className="waves-effect grey-text text-darken-3"
+                                        onClick={this.selectMenu.bind(this, v.id)}
                                     >{v.page}</a>
                                 </li>
                             )
@@ -186,7 +183,7 @@ const NavBar = React.createClass({
                     { this.state.servicesData.map(function(vSd, iSd){
                         return(
                             <li key={vSd.id}>
-                                <a href="#!" name={vSd.id} onClick={this.selectMenu}>{vSd.page}</a>
+                                <a href="#!" onClick={this.selectMenu.bind(this, vSd.id)}>{vSd.page}</a>
                             </li>
                         )
                     }.bind(this))}
