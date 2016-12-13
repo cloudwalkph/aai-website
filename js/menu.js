@@ -35,19 +35,58 @@ const NavBar = React.createClass({
                     page: 'Contact',
                     class: 'waves-effect grey-text text-darken-3'
                 }
+            ],
+            servicesData: [
+                {
+                    id: 'brandActivations',
+                    page: 'Brand Activations'
+                },
+                {
+                    id: 'events',
+                    page: 'Events'
+                },
+                {
+                    id: 'sampling',
+                    page: 'Sampling +'
+                },
+                {
+                    id: 'designAndProduction',
+                    page: 'Design And Production'
+                },
+                {
+                    id: 'creativesAndStrategy',
+                    page: 'Creatives And Strategy'
+                },
+                {
+                    id: 'tieUpsAndPartnerships',
+                    page: 'Tie-ups And Partnerships'
+                }
             ]
         }
     },
 
     getInitialState() {
         return {
-            menuData: this.props.menuData
+            menuData: this.props.menuData,
+            servicesData: this.props.servicesData
         }
     },
 
     componentDidMount () {
-        $(".button-collapse").sideNav();
-        $(".dropdown-button").dropdown();
+        $('.button-collapse').sideNav({
+                menuWidth: 300, // Default is 240
+                edge: 'left', // Choose the horizontal origin
+                closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+                draggable: true // Choose whether you can drag to open on touch screens
+            }
+        );
+        $(".dropdown-button").dropdown({
+            constrain_width: true,
+            belowOrigin: true
+        });
+        $('.collapsible').collapsible({
+            accordion: true
+        });
     },
     
     selectMenu(e) {
@@ -68,16 +107,31 @@ const NavBar = React.createClass({
                             </a>
                             <ul className="right hide-on-med-and-down">
                                 { this.state.menuData.map(function(v, i) {
-                                    return(
-                                        <li key={i} className={v.active}>
-                                            <a 
-                                                className={v.class} 
-                                                name={v.id} 
-                                                onClick={this.selectMenu}
-                                                data-activates={v.dropdown}
-                                            >{v.page}</a>
-                                        </li>
-                                    )
+                                    if(v.id === 'services') {
+                                        return(
+                                            <li key={v.id} className={v.active}>
+                                                <a 
+                                                    className={v.class} 
+                                                    name={v.id} 
+                                                    onClick={this.selectMenu}
+                                                    data-activates="services-dropdown"
+                                                    data-hover="true"
+                                                    data-constrainwidth="false"
+                                                    data-beloworigin="true"
+                                                >{v.page}</a>
+                                            </li>
+                                        )
+                                    } else {
+                                        return(
+                                            <li key={v.id} className={v.active}>
+                                                <a 
+                                                    className={v.class} 
+                                                    name={v.id} 
+                                                    onClick={this.selectMenu}
+                                                >{v.page}</a>
+                                            </li>
+                                        )
+                                    }
                                 }.bind(this))}
                             </ul>
                         </div>
@@ -94,24 +148,48 @@ const NavBar = React.createClass({
                         </center>
                     </li>
                     { this.state.menuData.map(function(v, i) {
-                        return(
-                            <li key={i} className={v.active}>
-                                <a 
-                                    className="waves-effect grey-text text-darken-3" 
-                                    name={v.id} 
-                                    onClick={this.selectMenu}
-                                >{v.page}</a>
-                            </li>
-                        )
+                        if(v.id === 'services') {
+                            return(
+                                <li key={i} className="no-padding">
+                                    <ul className="collapsible collapsible-accordion">
+                                        <li>
+                                            <a className="collapsible-header">{v.page}<i className="material-icons">arrow_drop_down</i></a>
+                                            <div className="collapsible-body">
+                                                <ul>
+                                                    { this.state.servicesData.map(function(vSd, iSd){
+                                                        return(
+                                                            <li key={vSd.id}>
+                                                                <a href="#!" name={vSd.id} onClick={this.selectMenu}>{vSd.page}</a>
+                                                            </li>
+                                                        )
+                                                    }.bind(this))}
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            )
+                        } else {
+                            return(
+                                <li key={v.id} className={v.active}>
+                                    <a 
+                                        className="waves-effect grey-text text-darken-3" 
+                                        name={v.id} 
+                                        onClick={this.selectMenu}
+                                    >{v.page}</a>
+                                </li>
+                            )
+                        }
                     }.bind(this))}
                 </ul>
                 <ul id="services-dropdown" className="dropdown-content">
-                    <li><a href="#!" name="brandActivations" onClick={this.selectMenu}>Brand Activations</a></li>
-                    <li><a href="#!" name="events" onClick={this.selectMenu}>Events</a></li>
-                    <li><a href="#!" name="sampling" onClick={this.selectMenu}>Sampling +</a></li>
-                    <li><a href="#!" name="designAndProduction" onClick={this.selectMenu}>Design And Production</a></li>
-                    <li><a href="#!" name="creativesAndStrategy" onClick={this.selectMenu}>Creatives And Strategy</a></li>
-                    <li><a href="#!" name="tieUpsAndPartnerships" onClick={this.selectMenu}>Tie-ups And Partnerships</a></li>
+                    { this.state.servicesData.map(function(vSd, iSd){
+                        return(
+                            <li key={vSd.id}>
+                                <a href="#!" name={vSd.id} onClick={this.selectMenu}>{vSd.page}</a>
+                            </li>
+                        )
+                    }.bind(this))}
                 </ul>
             </div>
         )

@@ -28,7 +28,7 @@ const TieUpsAndPartnerships = React.createClass({
 
                 <div className="section">
                     <center>
-                        <img src="img/tieUpsAndPartnerships/top.png" />
+                        <img className="responsive-img" src="img/tieUpsAndPartnerships/top.png" />
                     </center>
                 </div>
 

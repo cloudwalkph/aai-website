@@ -15,7 +15,7 @@ const Sampling = React.createClass({
             <div>
                 <div className="section">
                     <center>
-                        <img src="img/sampling/top.png" />
+                        <img className="responsive-img" src="img/sampling/top.png" />
                     </center>
                 </div>
 

@@ -66,6 +66,10 @@ p, li, nav a {
     font-family: 'Gotham Light'
 }
 
+.slider a {
+    text-transform: uppercase;
+}
+
 a {
     font-family: 'Moon Bold'
 }
@@ -82,13 +86,13 @@ strong {
     text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0,0,0,.7)
 }
 
-svg {
+.footer_icon svg {
     width: 24px;
     height: 24px;
     vertical-align: middle;
 }
 
-path {
+.footer_icon path {
     fill: #757575;
 }
 

@@ -27,7 +27,7 @@ const Events = React.createClass({
             <div>
                 <div className="section">
                     <center>
-                        <img src="img/events/top.png" />
+                        <img className="responsive-img" src="img/events/top.png" />
                     </center>
                 </div>
 
@@ -41,7 +41,7 @@ const Events = React.createClass({
                         </div>
                     </div>
                     <div className="parallax">
-                        <img className="responsive-img" src="img/events/image2.jpg" />
+                        <img src="img/events/image2.jpg" />
                     </div>
                 </div>
 
@@ -56,7 +56,7 @@ const Events = React.createClass({
                     </div>
 
                     <div className="parallax">
-                        <img className="responsive-img" src="img/events/light.jpg" />
+                        <img src="img/events/light.jpg" />
                     </div>
                 </div>
 

@@ -27,7 +27,7 @@ const DesignAndProduction = React.createClass({
             <div>
                 <div className="section">
                     <center>
-                        <img src="img/designAndProduction/top.png" />
+                        <img className="responsive-img" src="img/designAndProduction/top.png" />
                     </center>
                 </div>
 

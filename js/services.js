@@ -92,7 +92,7 @@ const Services = React.createClass({
                         return(
                             <div
                                 key={value.id}
-                                className="col s4"
+                                className="col s12 m4 l4"
                                 id={'pic' + (index + 1)}
                                 onMouseEnter={this.changeImage}
                                 onMouseLeave={this.revertImage}
