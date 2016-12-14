@@ -71,8 +71,8 @@ const Home = React.createClass({
         });
     },
 
-    handleClick(e) {
-        this.props.getPage(e);
+    handleClick(page) {
+        this.props.getPage(page);
     },
 
     render() {
@@ -106,8 +106,7 @@ const Home = React.createClass({
                                             }.bind(this))}
                                             <center>
                                                 <a
-                                                    name={v.buttonName}
-                                                    onClick={this.handleClick}
+                                                    onClick={this.handleClick.bind(this, v.buttonName)}
                                                     className="waves-effect waves-orange orange accent-3 btn"
                                                 >{v.buttonLabel}</a>
                                             </center>

@@ -1,4 +1,5 @@
 var React = require('react');
+var ReactDOM = require('react-dom');
 
 const Services = React.createClass({
 
@@ -8,6 +9,7 @@ const Services = React.createClass({
                 {
                     id: 'brandActivations',
                     img: 'img/pic1.jpg',
+                    hoverImg: 'img/pic1.png',
                     content: [
                         'Engaging on-ground activations that lets consumer experience our clients\' products and services in a different and memorable way.'
                     ]
@@ -15,6 +17,7 @@ const Services = React.createClass({
                 {
                     id: 'events',
                     img: 'img/pic2.jpg',
+                    hoverImg: 'img/pic2.png',
                     content: [
                         'Create newsworthy moments or simply make a day truly unforgettable.',
                         'From concept, planning to execution, we run PR events, product launches and awards shows that make any date extraordinary.'
@@ -23,6 +26,7 @@ const Services = React.createClass({
                 {
                     id: 'sampling',
                     img: 'img/pic3.jpg',
+                    hoverImg: 'img/pic3.png',
                     content: [
                         'A nationwide logistics and operations network backed by innovative technologies, allows us to deploy massive sampling campaigns in all major cities and suburban areas with the utmost efficiency.'
                     ]
@@ -30,6 +34,7 @@ const Services = React.createClass({
                 {
                     id: 'designAndProduction',
                     img: 'img/pic4.jpg',
+                    hoverImg: 'img/pic4.png',
                     content: [
                         'Design and build anything from stages, booths, ambient media, UX and merchandize.'
                     ]
@@ -37,6 +42,7 @@ const Services = React.createClass({
                 {
                     id: 'creativesAndStrategy',
                     img: 'img/pic5.jpg',
+                    hoverImg: 'img/pic5.png',
                     content: [
                         'We help our clients launch major campaigns from concept to execution born from big ideas following a defined and realistic strategy.'
                     ]
@@ -44,6 +50,7 @@ const Services = React.createClass({
                 {
                     id: 'tieUpsAndPartnerships',
                     img: 'img/pic6.jpg',
+                    hoverImg: 'img/pic6.png',
                     content: [
                         'Our network of administrators, negotiators and planners can help bring together companies, organizations and institutions from all industries to form mutually beneficial partnerships.'
                     ]
@@ -58,21 +65,19 @@ const Services = React.createClass({
         }
     },
 
-    handleClick(e) {
-        this.props.getPage(e);
+    handleClick(page) {
+        this.props.getPage(page);
     },
 
     changeImage(e) {
 
-        $('#'+e.target.id).find('img').attr('src', 'img/' + e.target.id + '.png');
-        // $('#'+e.target.id).find('.card-action').addClass('orange accent-3');
-        $('#'+e.target.id).find('.card-action').children('a').removeClass('hide-on-med-and-up');
+        $(this.refs[e]).find('img').attr('src', this.state.servicesData[e].hoverImg);
+        $(this.refs[e]).find('.card-action').addClass('orange accent-3');
     },
 
     revertImage(e) {
-        $('#'+e.target.id).find('img').attr('src', 'img/' + e.target.id + '.jpg');
-        // $('#'+e.target.id).find('.card-action').removeClass('orange accent-3');
-        $('#'+e.target.id).find('.card-action').children('a').addClass('hide-on-med-and-up');
+        $(this.refs[e]).find('img').attr('src', this.state.servicesData[e].img);
+        $(this.refs[e]).find('.card-action').removeClass('orange accent-3');
     },
 
     render() {
@@ -94,10 +99,10 @@ const Services = React.createClass({
                         return(
                             <div
                                 key={value.id}
+                                ref={index}
                                 className="col s12 m4 l4"
-                                id={'pic' + (index + 1)}
-                                onMouseEnter={this.changeImage}
-                                onMouseLeave={this.revertImage}
+                                onMouseEnter={this.changeImage.bind(this, index)}
+                                onMouseLeave={this.revertImage.bind(this, index)}
                             >
                                 <div className="card large z-depth-0">
                                     <div className="card-image">
@@ -116,14 +121,11 @@ const Services = React.createClass({
                                             )
                                         }.bind(this))}
                                     </div>
-                                    <div className="card-action">
-                                        <a
-                                            name={value.id}
-                                            onClick={this.handleClick}
-                                            className="btn hide-on-med-and-up orange accent-3 z-depth-0"
-                                        >
-                                            Learn More
-                                        </a>
+                                    <div
+                                        className="card-action"
+                                        onClick={this.handleClick.bind(this, value.id)}
+                                    >
+                                        <a className="white-text">Learn More</a>
                                     </div>
                                 </div>
                             </div>

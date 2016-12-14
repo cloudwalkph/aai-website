@@ -34,9 +34,9 @@ var App = React.createClass({
         };
     },
 
-    getPage(e) {
+    getPage(page) {
         this.setState({
-            page: e.target.name
+            page: page
         })
     },
 
