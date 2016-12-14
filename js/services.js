@@ -65,12 +65,14 @@ const Services = React.createClass({
     changeImage(e) {
 
         $('#'+e.target.id).find('img').attr('src', 'img/' + e.target.id + '.png');
-        $('#'+e.target.id).find('.card-action').addClass('orange accent-3');
+        // $('#'+e.target.id).find('.card-action').addClass('orange accent-3');
+        $('#'+e.target.id).find('.card-action').children('a').removeClass('hide-on-med-and-up');
     },
 
     revertImage(e) {
         $('#'+e.target.id).find('img').attr('src', 'img/' + e.target.id + '.jpg');
-        $('#'+e.target.id).find('.card-action').removeClass('orange accent-3');
+        // $('#'+e.target.id).find('.card-action').removeClass('orange accent-3');
+        $('#'+e.target.id).find('.card-action').children('a').addClass('hide-on-med-and-up');
     },
 
     render() {
@@ -118,7 +120,7 @@ const Services = React.createClass({
                                         <a
                                             name={value.id}
                                             onClick={this.handleClick}
-                                            className="white-text"
+                                            className="btn hide-on-med-and-up orange accent-3 z-depth-0"
                                         >
                                             Learn More
                                         </a>
