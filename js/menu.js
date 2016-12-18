@@ -113,10 +113,10 @@ const NavBar = React.createClass({
                                                 <a 
                                                     className={v.class}
                                                     onClick={this.selectMenu.bind(this, v.id)}
-                                                    data-activates="services-dropdown"
-                                                    data-hover="true"
-                                                    data-constrainwidth="false"
-                                                    data-beloworigin="true"
+                                                    // data-activates="services-dropdown"
+                                                    // data-hover="true"
+                                                    // data-constrainwidth="false"
+                                                    // data-beloworigin="true"
                                                 >{v.page}</a>
                                             </li>
                                         )
@@ -146,8 +146,8 @@ const NavBar = React.createClass({
                         </center>
                     </li>
                     { this.state.menuData.map(function(v, i) {
-                        if(v.id === 'services') {
-                            return(
+                        // if(v.id === 'services') {
+                            /*return(
                                 <li key={i} className="no-padding">
                                     <ul className="collapsible collapsible-accordion">
                                         <li>
@@ -166,8 +166,8 @@ const NavBar = React.createClass({
                                         </li>
                                     </ul>
                                 </li>
-                            )
-                        } else {
+                            )*/
+                        // } else {
                             return(
                                 <li key={v.id} className={v.active}>
                                     <a 
@@ -176,10 +176,10 @@ const NavBar = React.createClass({
                                     >{v.page}</a>
                                 </li>
                             )
-                        }
+                        // }
                     }.bind(this))}
                 </ul>
-                <ul id="services-dropdown" className="dropdown-content">
+                {/*<ul id="services-dropdown" className="dropdown-content">
                     { this.state.servicesData.map(function(vSd, iSd){
                         return(
                             <li key={vSd.id}>
@@ -187,7 +187,7 @@ const NavBar = React.createClass({
                             </li>
                         )
                     }.bind(this))}
-                </ul>
+                </ul>*/}
             </div>
         )
     }
