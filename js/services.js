@@ -72,12 +72,12 @@ const Services = React.createClass({
     changeImage(e) {
 
         $(this.refs[e]).find('img').attr('src', this.state.servicesData[e].hoverImg);
-        $(this.refs[e]).find('.card-action').addClass('orange accent-3');
+        $(this.refs[e]).find('.card-action').children('a').removeClass('hide-on-med-and-up').addClass('buttonHoverAnimate');
     },
 
     revertImage(e) {
         $(this.refs[e]).find('img').attr('src', this.state.servicesData[e].img);
-        $(this.refs[e]).find('.card-action').removeClass('orange accent-3');
+        $(this.refs[e]).find('.card-action').children('a').addClass('hide-on-med-and-up').removeClass('buttonHoverAnimate');
     },
 
     render() {
@@ -125,7 +125,7 @@ const Services = React.createClass({
                                         className="card-action"
                                         onClick={this.handleClick.bind(this, value.id)}
                                     >
-                                        <a className="white-text">Learn More</a>
+                                        <a className="btn orange accent-3 hide-on-med-and-up z-depth-0">Learn More</a>
                                     </div>
                                 </div>
                             </div>

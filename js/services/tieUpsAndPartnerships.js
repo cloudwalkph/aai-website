@@ -4,6 +4,8 @@ const TieUpsAndPartnerships = React.createClass({
 
     componentDidMount () {
         $('.parallax').parallax();
+        $('.screenImageHeight').height(screen.height);
+        $('html,body').animate({scrollTop:0},1000);
     },
 
     handleClick(e) {
@@ -26,7 +28,7 @@ const TieUpsAndPartnerships = React.createClass({
         return(
             <div>
 
-                <div className="section">
+                <div className="section screenImageHeight">
                     <center>
                         <img className="responsive-img" src="img/tieUpsAndPartnerships/top.png" />
                     </center>

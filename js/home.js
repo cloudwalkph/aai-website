@@ -66,7 +66,7 @@ const Home = React.createClass({
     componentDidMount () {
         $('.slider').slider({
             full_width: true,
-            height: 500,
+            height: screen.height,
             indicators: true
         });
     },
@@ -75,9 +75,24 @@ const Home = React.createClass({
         this.props.getPage(page);
     },
 
+    handleSliderNavigation(e) {
+        let direction = e.target.getAttribute('class');
+        if(direction == 'leftNavi')
+        {
+            $('.slider').slider('prev');
+            return;
+        }
+
+        $('.slider').slider('next');
+    },
+
     render() {
         return(
             <div>
+
+                <img className="leftNavi" onClick={this.handleSliderNavigation} src="img/NAVIGATION/leftArrow.png" />
+                <img className="rightNavi" onClick={this.handleSliderNavigation} src="img/NAVIGATION/rightArrow.png" />
+
                 <div className="slider fullscreen">
                     <ul className="slides white">
                     { this.state.sliderData.map(function(v,i) {
@@ -107,7 +122,7 @@ const Home = React.createClass({
                                             <center>
                                                 <a
                                                     onClick={this.handleClick.bind(this, v.buttonName)}
-                                                    className="waves-effect waves-orange orange accent-3 btn"
+                                                    className="waves-effect waves-orange orange accent-3 btn z-depth-0"
                                                 >{v.buttonLabel}</a>
                                             </center>
                                         </div>

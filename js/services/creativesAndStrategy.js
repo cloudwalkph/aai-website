@@ -4,6 +4,8 @@ const CreativesAndStrategy = React.createClass({
 
     componentDidMount () {
         $('.parallax').parallax();
+        $('.screenImageHeight').height(screen.height);
+        $('html,body').animate({scrollTop:0},1000);
     },
 
     handleClick(e) {
@@ -25,7 +27,7 @@ const CreativesAndStrategy = React.createClass({
     render() {
         return(
             <div>
-                <div className="section">
+                <div className="section screenImageHeight">
                     <center>
                         <img className="responsive-img" src="img/creativesAndStrategy/top.png" />
                     </center>

@@ -4,6 +4,8 @@ const Sampling = React.createClass({
 
     componentDidMount () {
         $('.parallax').parallax();
+        $('.screenImageHeight').height(screen.height);
+        $('html,body').animate({scrollTop:0},1000);
     },
 
     handleClick() {
@@ -13,7 +15,7 @@ const Sampling = React.createClass({
     render() {
         return(
             <div>
-                <div className="section">
+                <div className="section screenImageHeight">
                     <center>
                         <img className="responsive-img" src="img/sampling/top.png" />
                     </center>

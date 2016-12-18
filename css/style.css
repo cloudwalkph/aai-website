@@ -109,5 +109,39 @@ strong {
     vertical-align: center;
 }
 
+/*MATERIALIZE*/
+
+.slider .indicators .indicator-item.active {
+  background-color: #ff9100;
+}
+
+
+.buttonHoverAnimate {
+  animation-name : rotateAnimate;
+  animation-duration: 0.5s;
+}
+
+.leftNavi {
+  position: absolute;
+  left : 1%;
+  top: 50%;
+  z-index: 9;
+  cursor:pointer;
+
+}
+
+.rightNavi {
+  position: absolute;
+  right : 1%;
+  top: 50%;
+  z-index: 9;
+  cursor:pointer;
+
+}
+
+@keyframes rotateAnimate {
+  from {transform: rotateX(180deg);}
+  to {transform: rotateX(360deg);}
+}
 
         

@@ -2,6 +2,7 @@ var React = require('react');
 
 const BrandActivations = React.createClass({
 
+
     drawChart() {
         var data = google.visualization.arrayToDataTable([
             ['Consumer', 'Engagements'],
@@ -36,6 +37,8 @@ const BrandActivations = React.createClass({
         $('.parallax').parallax();
         google.charts.load('current', {'packages':['corechart']});
         google.charts.setOnLoadCallback(this.drawChart);
+        $('.screenImageHeight').height(screen.height);
+        $('html,body').animate({scrollTop:0},1000);
     },
 
     handleClick(e) {
@@ -57,7 +60,7 @@ const BrandActivations = React.createClass({
     render() {
         return(
             <div>
-                <div className="section">
+                <div className="section screenImageHeight">
                     <center>
                         <img className="responsive-img" src="img/brandActivations/top.png" alt="Breeze sets a New Guiness World Record" />
                     </center>
