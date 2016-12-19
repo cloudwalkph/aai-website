@@ -76,7 +76,7 @@ const BrandActivations = React.createClass({
                         </div>
                     </div>
                     <div className="parallax">
-                        <img src="img/brandActivations/Breeze-sets-a-New-Guinness-World-Record.jpg" />
+                        <img src="img/brandActivations/Breeze-sets-a-New-Guinness-World-Record.png" />
                     </div>
                 </div>
                 
