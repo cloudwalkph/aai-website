@@ -9,7 +9,7 @@ const Footer = React.createClass({
     render() {
         return(
             <footer className="page-footer white">
-                <div className="footer-copyright white">
+                <div className="footer-copyright white" style={{overflow : 'initial'}}>
                     <div className="container grey-text text-darken-1 center-align">
                         Copyright © 2016 Activations Advertising Inc. All rights reserved.
                         <span>

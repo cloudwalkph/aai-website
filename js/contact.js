@@ -13,7 +13,7 @@ const Contact = React.createClass({
             		<center>
                         <img className="responsive-img" src="img/contactUs.png" />
                     </center>
-                    <div className="section">
+                    <div className="section" style={{fontFamily: 'Gotham Book'}}>
                         <p style={{textAlign : 'center'}}>
                         	<i className="material-icons dp48" style={{verticalAlign: 'bottom'}}>my_location</i>&nbsp;
                         	115 Kasing-Kasing corner K-16th St. <br/> Brgy. East Kamias, Quezon City
