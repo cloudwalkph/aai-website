@@ -148,4 +148,8 @@ strong {
   font-size: 11px;
 }
 
+.hide-on-med-and-up .slides li img {
+  background-position: 50% !important;
+}
+
         

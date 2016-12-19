@@ -14,6 +14,10 @@ const News = React.createClass({
     	$(e.target).children('a').addClass('hide-on-med-and-up').removeClass('buttonHoverAnimate');
     },
 
+    componentDidMount() {
+    	$('html,body').animate({scrollTop:0},1000);
+    },
+
     render() {
         return(
             <div className="section">

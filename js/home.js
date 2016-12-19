@@ -104,7 +104,7 @@ const Home = React.createClass({
                                     <div className="row">
                                         <div className={v.captionClass}>
                                             <center>
-                                                <h5
+                                                <h4
                                                     className="cyan-text text-darken-4"
                                                 >
                                                 { v.title.map(function(vt, it) {
@@ -112,11 +112,11 @@ const Home = React.createClass({
                                                         <span key={it}>{vt}</span>
                                                     )})
                                                 }
-                                                </h5>
+                                                </h4>
                                             </center>
                                             { v.context.map(function(vc, ic) {
                                                 return(
-                                                    <p key={vc} className={v.contextClass} style={{textAlign : 'justify'}}>{vc}</p>
+                                                    <p key={vc} className={v.contextClass}>{vc}</p>
                                                 )
                                             }.bind(this))}
                                             <center>
