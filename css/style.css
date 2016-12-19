@@ -53,25 +53,72 @@ main {
 
 /* custom styles */
 
-h1, h2, h3, h4, h5, h6 {
-    text-transform: uppercase;
-    font-family: 'Norwester';
-}
-
-p, li, nav a {
+nav ul a {
     font-family: 'Gotham Book';
+    color: #beb9b6;
 }
 
-.slider p {
-    font-family: 'Gotham Light'
+nav ul a:hover {
+    background-color: transparent;
+    color: #f2a650;
+}
+
+nav ul li.active {
+    background-color: transparent;
+}
+
+nav li.active a {
+    color: #e98312;
+}
+
+.side-nav a {
+    font-family: 'Gotham Book';
+    color: #beb9b6;
+}
+
+.side-nav li.active a {
+    color: #e98312;
+}
+
+.headline {
+    font-family: 'Norwester';
+    color: #222d4e;
+    text-transform: uppercase;
+}
+
+.slider .slides li .caption p {
+    font-family: 'Gotham Book';
+    color: #464241;
+    text-align: justify;
+    text-justify: auto;
+    -moz-text-align-last: right; /* Code for Firefox */
+    text-align-last: center;
+    font-size: 15px;
+}
+
+.aai_orange {
+    color: #e98312;;
+}
+
+.btn, .btn-large {
+    font-family: 'Gotham Medium';
+    background-color: #f2a650;
+    font-size: 12px;
+}
+
+.btn:hover, .btn-large:hover {
+    font-family: 'Gotham Medium';
+    background-color: #e98312;
+}
+
+.waves-effect.waves-aai_btn .waves-ripple {
+     /* The alpha value allows the text and background color
+     of the button to still show through. */
+      background-color: rgba(242, 166, 80, 0.65);
 }
 
 .slider a {
     text-transform: uppercase;
-}
-
-a {
-    font-family: 'Moon Bold'
 }
 
 strong {
