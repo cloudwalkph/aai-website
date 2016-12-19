@@ -44,7 +44,7 @@ var App = React.createClass({
         return(
             <div>
                 <header>
-                    <Menu getPage={this.getPage} />
+                    <Menu getPage={this.getPage} activePage={this.state.page} />
                 </header>
                     
                 <main>

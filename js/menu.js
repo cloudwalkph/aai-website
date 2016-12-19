@@ -8,32 +8,32 @@ const NavBar = React.createClass({
                 {
                     id: 'home',
                     page: 'Home',
-                    class: 'waves-effect grey-text text-darken-3'
+                    class: 'aai_menu waves-effect'
                 },
                 {
                     id: 'services',
                     page: 'Services',
-                    class: 'waves-effect grey-text text-darken-3 dropdown-button'
+                    class: 'aai_menu waves-effect dropdown-button'
                 },
                 {
                     id: 'news',
                     page: 'News',
-                    class: 'waves-effect grey-text text-darken-3'
+                    class: 'aai_menu waves-effect'
                 },
                 {
                     id: 'about',
                     page: 'About',
-                    class: 'waves-effect grey-text text-darken-3'
+                    class: 'aai_menu waves-effect'
                 },
                 {
                     id: 'jobs',
                     page: 'Jobs',
-                    class: 'waves-effect grey-text text-darken-3'
+                    class: 'aai_menu waves-effect'
                 },
                 {
                     id: 'contact',
                     page: 'Contact',
-                    class: 'waves-effect grey-text text-darken-3'
+                    class: 'aai_menu waves-effect'
                 }
             ],
             servicesData: [
@@ -61,16 +61,24 @@ const NavBar = React.createClass({
                     id: 'tieUpsAndPartnerships',
                     page: 'Tie-ups And Partnerships'
                 }
-            ]
+            ],
+            activePage: 'home'
         }
     },
 
     getInitialState() {
         return {
             menuData: this.props.menuData,
-            servicesData: this.props.servicesData
+            servicesData: this.props.servicesData,
+            activeMenu: this.props.activePage
         }
     },
+
+    componentWillReceiveProps (nextProps) {
+        this.setState({
+            activeMenu: nextProps.activePage
+        });
+    },    
 
     componentDidMount () {
         $('.button-collapse').sideNav({
@@ -89,11 +97,11 @@ const NavBar = React.createClass({
         });
     },
     
-    selectMenu(page) {
+    selectMenu (page) {
         this.props.getPage(page);
     },
 
-    render() {
+    render () {
         return(
             <div>
                 <div className="navbar-fixed">
@@ -109,7 +117,7 @@ const NavBar = React.createClass({
                                 { this.state.menuData.map(function(v, i) {
                                     if(v.id === 'services') {
                                         return(
-                                            <li key={v.id} className={v.active}>
+                                            <li key={v.id}>
                                                 <a 
                                                     className={v.class}
                                                     onClick={this.selectMenu.bind(this, v.id)}
@@ -122,7 +130,10 @@ const NavBar = React.createClass({
                                         )
                                     } else {
                                         return(
-                                            <li key={v.id} className={v.active}>
+                                            <li 
+                                                key={v.id}
+                                                className={this.state.activeMenu == v.id ? 'active' : ''}
+                                            >
                                                 <a 
                                                     className={v.class} 
                                                     onClick={this.selectMenu.bind(this, v.id)}
@@ -146,8 +157,8 @@ const NavBar = React.createClass({
                         </center>
                     </li>
                     { this.state.menuData.map(function(v, i) {
-                        // if(v.id === 'services') {
-                            /*return(
+                        if(v.id === 'services') {
+                            return(
                                 <li key={i} className="no-padding">
                                     <ul className="collapsible collapsible-accordion">
                                         <li>
@@ -166,20 +177,20 @@ const NavBar = React.createClass({
                                         </li>
                                     </ul>
                                 </li>
-                            )*/
-                        // } else {
+                            )
+                        } else {
                             return(
-                                <li key={v.id} className={v.active}>
+                                <li key={v.id} className={this.state.activeMenu == v.id ? 'active' : ''}>
                                     <a 
-                                        className="waves-effect grey-text text-darken-3"
+                                        className="waves-effect"
                                         onClick={this.selectMenu.bind(this, v.id)}
                                     >{v.page}</a>
                                 </li>
                             )
-                        // }
+                        }
                     }.bind(this))}
                 </ul>
-                {/*<ul id="services-dropdown" className="dropdown-content">
+                <ul id="services-dropdown" className="dropdown-content">
                     { this.state.servicesData.map(function(vSd, iSd){
                         return(
                             <li key={vSd.id}>
@@ -187,7 +198,7 @@ const NavBar = React.createClass({
                             </li>
                         )
                     }.bind(this))}
-                </ul>*/}
+                </ul>
             </div>
         )
     }
