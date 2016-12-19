@@ -29,7 +29,7 @@ const Events = React.createClass({
             <div>
                 <div className="section screenImageHeight">
                     <center>
-                        <img className="responsive-img" src="img/events/top.png" />
+                        <img className="responsive-img" src="img/events/Events.png" />
                     </center>
                 </div>
 

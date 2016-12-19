@@ -144,4 +144,8 @@ strong {
   to {transform: rotateX(360deg);}
 }
 
+.fontSizeParagraph {
+  font-size: 11px;
+}
+
         

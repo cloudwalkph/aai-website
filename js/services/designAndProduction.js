@@ -29,7 +29,7 @@ const DesignAndProduction = React.createClass({
             <div>
                 <div className="section screenImageHeight">
                     <center>
-                        <img className="responsive-img" src="img/designAndProduction/top.png" />
+                        <img className="responsive-img" src="img/designAndProduction/Design_and_Production.png" />
                     </center>
                 </div>
 

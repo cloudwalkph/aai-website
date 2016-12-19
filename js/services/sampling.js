@@ -17,7 +17,7 @@ const Sampling = React.createClass({
             <div>
                 <div className="section screenImageHeight">
                     <center>
-                        <img className="responsive-img" src="img/sampling/top.png" />
+                        <img className="responsive-img" src="img/sampling/Sampling.png" />
                     </center>
                 </div>
 

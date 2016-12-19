@@ -30,7 +30,7 @@ const TieUpsAndPartnerships = React.createClass({
 
                 <div className="section screenImageHeight">
                     <center>
-                        <img className="responsive-img" src="img/tieUpsAndPartnerships/top.png" />
+                        <img className="responsive-img" src="img/tieUpsAndPartnerships/Tie_ups_and_Partnership.png" />
                     </center>
                 </div>
 

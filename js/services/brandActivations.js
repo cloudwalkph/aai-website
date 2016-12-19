@@ -62,7 +62,7 @@ const BrandActivations = React.createClass({
             <div>
                 <div className="section screenImageHeight">
                     <center>
-                        <img className="responsive-img" src="img/brandActivations/top.png" alt="Breeze sets a New Guiness World Record" />
+                        <img className="responsive-img" src="img/brandActivations/BrandActivations.png" alt="Breeze sets a New Guiness World Record" />
                     </center>
                 </div>
 
