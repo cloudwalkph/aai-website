@@ -1,6 +1,6 @@
 var React = require('react');
 
-const TieUpsAndPartnerships = React.createClass({
+const DataAndAnalytics = React.createClass({
 
     componentDidMount () {
         $('.parallax').parallax();
@@ -26,38 +26,32 @@ const TieUpsAndPartnerships = React.createClass({
     render() {
         return(
             <div>
-                <div className="screenImageHeight valign-wrapper">
-                    <div className="container center-align">
-                        <img className="responsive-img" src="img/tieUpsAndPartnerships/Tie_ups_and_Partnership.png" />
-                    </div>
-                </div>
-
                 <div className="parallax-container valign-wrapper">
                     <div className="container">
                         <div className="row">
-                            <div className="col s12 m12 l3 offset-l2 right-align valign">
-                                <h5 className="headline">Bringing <span className="aai_orange">Organizations</span> Together</h5>
+                            <div className="col s12 m12 l4 offset-l1 right-align valign">
+                                <h5 className="headline"><span className="aai_orange">On-ground</span> knowledge and information.</h5>
                             </div>
                         </div>
                         <div className="row">
                             <div className="col s12 m12 l5 valign">
-                                <p className="right-align">We specialize in building relationships between our clients and other organizations to create a mutually-beneficial partnership that benefits all involved.</p>
-                                <p className="right-align">From the sharing of products, licensing, permits, and special arrangements, we help find solutions that generate results when two great organizations work together.</p>
+                                <p className="right-align">We provide a comprehensive and regularly updated database of important on-ground venues like malls, schools, offices, LGUs and local communities.</p>
+                                <p className="right-align">These include key information like population, demographics, foot-traffic, rates and venue measurements that will be essential in the planning and implementation of all on-ground projects.</p>
                             </div>
                         </div>
                     </div>
                     <div className="parallax">
-                        <img src="img/tieUpsAndPartnerships/image1.jpg" />
+                        <img src="img/dataAndAnalytics/image1.jpg" />
                     </div>
                 </div>
 
-                <div style={{width: '100%'}}>
+                <div className="video-container">
                     <video
                         onMouseEnter={this.playVideo}
                         onMouseOut={this.pauseVideo}
                         onClick={this.handleClick}
                         loop=""
-                        poster="img/tieUpsAndPartnerships/vid_placeholder.jpg" 
+                        poster="img/dataAndAnalytics/vid-placeholder.jpg" 
                         className="responsive-video"
                     >
                         <source src="http://assets.yeticycles.com/video/2016_NewZealand_SB55_Enviorment_HD.mp4" type="video/mp4" />
@@ -69,4 +63,4 @@ const TieUpsAndPartnerships = React.createClass({
     }
 });
 
-module.exports = TieUpsAndPartnerships;
+module.exports = DataAndAnalytics;

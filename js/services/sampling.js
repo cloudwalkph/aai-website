@@ -4,29 +4,40 @@ const Sampling = React.createClass({
 
     componentDidMount () {
         $('.parallax').parallax();
-        $('.screenImageHeight').height(screen.height);
         $('html,body').animate({scrollTop:0},1000);
     },
 
-    handleClick() {
-        
+    handleClick(e) {
+        if(e.target.paused) {
+            this.playVideo(e);
+        } else {
+            this.pauseVideo(e);
+        }
+    },
+
+    playVideo(e) {
+        e.target.play();
+    },
+
+    pauseVideo(e) {
+        e.target.pause();
     },
 
     render() {
         return(
             <div>
-                <div className="section screenImageHeight">
-                    <center>
+                <div className="screenImageHeight valign-wrapper">
+                    <div className="container center-align">
                         <img className="responsive-img" src="img/sampling/Sampling.png" />
-                    </center>
+                    </div>
                 </div>
 
                 <div className="parallax-container valign-wrapper">
-                    <div className="row">
+                    <div className="row container">
                         <div className="col s12 m12 l5 right-align valign">
-                            <h5>Sample <span className="orange-text">Anywhere</span> to <span className="orange-text">Anyone</span></h5>
-                            <p className="grey-text text-darken-4">A nationwide logistics and operations network, allows us to deploy massive sampling campaigns in all major cities and suburban areas in the Philippines.</p>
-                            <p className="grey-text text-darken-4">Our main facilities in Metro Manila and our satellite offices in Cebu and Davao provide convenient bases where the manpower and equipment needed to sample at scale can be concentrated and deployed everywhere.</p>
+                            <h5 className="headline">Sample <span className="aai_orange">Anywhere</span> to <span className="aai_orange">Anyone</span></h5>
+                            <p>A nationwide logistics and operations network, allows us to deploy massive sampling campaigns in all major cities and suburban areas in the Philippines.</p>
+                            <p>Our main facilities in Metro Manila and our satellite offices in Cebu and Davao provide convenient bases where the manpower and equipment needed to sample at scale can be concentrated and deployed everywhere.</p>
                         </div>
                     </div>
                     <div className="parallax">
@@ -35,10 +46,10 @@ const Sampling = React.createClass({
                 </div>
 
                 <div className="parallax-container valign-wrapper">
-                    <div className="row">
+                    <div className="row container">
                         <div className="col s12 m12 l5 offset-l7 left-align valign">
-                            <h5>Your Product Direct to <span className="orange-text">Consumers</span></h5>
-                            <p className="grey-text text-darken-4">With more than 200+ well-trained and experienced sampling experts, we can deliver your product and message to the consumer whenever or wherever you want to meet them.</p>
+                            <h5 className="headline">Your Product Direct to <span className="aai_orange">Consumers</span></h5>
+                            <p>With more than 200+ well-trained and experienced sampling experts, we can deliver your product and message to the consumer whenever or wherever you want to meet them.</p>
                         </div>
                     </div>
                     <div className="parallax">
@@ -47,11 +58,10 @@ const Sampling = React.createClass({
                 </div>
 
                 <div className="parallax-container valign-wrapper">
-                    <div className="row">
-                        <div className="col s12 m12 l5 center-align valign">
-                            <h5>Sampling That's More <span className="orange-text">Reliable</span> and <span className="orange-text">Accurate</span></h5>
-                            <p>Think it. Make it. Build it. A team of designers, developers and production experts can build anything from stages, booths, ambient media, merchandize and digital ux.</p>
-                            <p>This integration of creative design, digital expertise and production  allows our clients to quickly bring their solutions and ideas to life.</p>
+                    <div className="row container">
+                        <div className="col s12 m12 l4 offset-l1 center-align valign">
+                            <h3 className="headline">Accurate, Reliable and <span className="aai_orange">Verified</span></h3>
+                            <img src="img/sampling/verify.png" />
                         </div>
                     </div>
                     <div className="parallax">
@@ -59,13 +69,27 @@ const Sampling = React.createClass({
                     </div>
                 </div>
 
-                <div className="row container">
-                    <div className="col s12 m12 l12 center">
-                        <p className="grey-text text-darken-4">Thru AAI InSite and AAI Live, we collect, track and record reliable and accurate sampling data that provides useful insights and learnings from the millions of consumer interactions we generate on-ground.</p>
+                <div className="section row container">
+                    <div className="col s12 m12 l12">
+                        <p className="center-align">We&rsquo;re the first agency to use the Verify on-ground validation platform.</p>
+                        <p className="center-align">Real-time data tracking collects reliable and accurate sampling data to gain valuable learnings from millions of consumer interactions.</p>
+                        <p className="center-align">Integrated GPS technology lets the agency and the client track and monitor all manpower movements the verify if target locations were visited.</p>
                     </div>
                 </div>
 
-                
+                <div className="video-container">
+                    <video
+                        onMouseEnter={this.playVideo}
+                        onMouseOut={this.pauseVideo}
+                        onClick={this.handleClick}
+                        loop=""
+                        poster="http://assets.yeticycles.com/images/bikes/sb6/2014_Kootenays_SB6_Enviorment-cover.jpg" 
+                        className="responsive-video"
+                    >
+                        <source src="http://assets.yeticycles.com/video/2014_Kootenays_SB6_Enviorment_HD.mp4" type="video/mp4" />
+                    </video>
+                </div>
+
             </div>
         )
     }

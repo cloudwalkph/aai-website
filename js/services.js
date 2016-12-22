@@ -11,7 +11,7 @@ const Services = React.createClass({
                     img: 'img/pic1.jpg',
                     hoverImg: 'img/pic1.png',
                     content: [
-                        'Engaging on-ground activations that lets consumer experience our clients\' products and services in a different and memorable way.'
+                        <span>Engaging on-ground activations that lets consumers experience our clients&rsquo; products and services in a different and memorable way.</span>
                     ]
                 },
                 {
@@ -40,11 +40,11 @@ const Services = React.createClass({
                     ]
                 },
                 {
-                    id: 'creativesAndStrategy',
-                    img: 'img/pic5.jpg',
-                    hoverImg: 'img/pic5.png',
+                    id: 'dataAndAnalytics',
+                    img: 'img/dataAndAnalytics.jpg',
+                    hoverImg: 'img/dataAndAnalytics.png',
                     content: [
-                        'We help our clients launch major campaigns from concept to execution born from big ideas following a defined and realistic strategy.'
+                        'We provide and use a comprehensive and updated set of data on important on-ground venues that will maximize whatever types of advertising we execute.'
                     ]
                 },
                 {
@@ -65,75 +65,85 @@ const Services = React.createClass({
         }
     },
 
+    componentDidMount () {
+        $('#title').height(window.innerHeight - 64);
+    },
+
     handleClick(page) {
         this.props.getPage(page);
     },
 
     changeImage(e) {
-
         $(this.refs[e]).find('img').attr('src', this.state.servicesData[e].hoverImg);
         $(this.refs[e]).find('.card-action').children('a').removeClass('hide-on-med-and-up').addClass('buttonHoverAnimate');
     },
 
     revertImage(e) {
         $(this.refs[e]).find('img').attr('src', this.state.servicesData[e].img);
-        $(this.refs[e]).find('.card-action').children('a').addClass('hide-on-med-and-up').removeClass('buttonHoverAnimate');
+        $(this.refs[e]).find('.card-action').children('a').removeClass('buttonHoverAnimate').addClass('hide-on-med-and-up');
     },
 
     render() {
         return(
-            <div className="section">
-                <div className="container">
-                    <center>
+            <div>
+
+                <div className="screenImageHeight section valign-wrapper">
+					<div className="container center-align">
                         <img className="responsive-img" src="img/ourservices.png" />
-                    </center>
-                    <div className="section">
+                    </div>
+                </div>
+
+                <div className="section">
+                    <div className="container">
                         <p>We deliver a diverse set of advertising services that caters to our clients constantly evolving needs. Being an integrated agency allows us to manage the entire project road map from initial concepts all the way to actual implementation.</p> 
                         <p>New innovations in video monitoring, consumer tracking and data acquisition gives our clients an abundance of clear perspectives and valuable insights whenever and wherever a project is taking place.</p>
                     </div>
                 </div>
-
-                <div className="container">
-                    <div className="row">
-                    { this.state.servicesData.map(function(value, index) {
-                        return(
-                            <div
-                                key={value.id}
-                                ref={index}
-                                className="col s12 m4 l4"
-                                onMouseEnter={this.changeImage.bind(this, index)}
-                                onMouseLeave={this.revertImage.bind(this, index)}
-                            >
-                                <div className="card large z-depth-0">
-                                    <div className="card-image">
-                                        <img className="responsive-img" src={value.img} />
-                                        <span className="card-title"></span>
-                                    </div>
-                                    <div className="card-content">
-                                        {value.content.map(function(value, index) {
-                                            return(
-                                                <p
-                                                    key={index}
-                                                    style={this.state.textStyle}
-                                                >
-                                                {value}
-                                                </p>
-                                            )
-                                        }.bind(this))}
-                                    </div>
-                                    <div
-                                        className="card-action"
-                                        onClick={this.handleClick.bind(this, value.id)}
-                                    >
-                                        <a className="btn orange accent-3 hide-on-med-and-up z-depth-0">Learn More</a>
+                
+                <div className="section">
+                    <div className="container">
+                        <div className="row">
+                        { this.state.servicesData.map(function(value, index) {
+                            return(
+                                <div
+                                    key={value.id}
+                                    ref={index}
+                                    className="col s12 m4 l4"
+                                    onMouseEnter={this.changeImage.bind(this, index)}
+                                    onMouseLeave={this.revertImage.bind(this, index)}
+                                    onClick={this.handleClick.bind(this, value.id)}
+                                >
+                                    <div className="card large z-depth-0">
+                                        <div className="card-image">
+                                            <img className="responsive-img" src={value.img} />
+                                            <span className="card-title"></span>
+                                        </div>
+                                        <div className="card-content">
+                                            {value.content.map(function(value, index) {
+                                                return(
+                                                    <p
+                                                        key={index}
+                                                        className="center-align"
+                                                    >
+                                                    {value}
+                                                    </p>
+                                                )
+                                            }.bind(this))}
+                                        </div>
+                                        <div
+                                            className="card-action center-align"
+                                        >
+                                            <a className="btn hide-on-med-and-up z-depth-0">Learn More</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        )
-                    }.bind(this))}
-                        
+                            )
+                        }.bind(this))}
+                            
+                        </div>
                     </div>
                 </div>
+
             </div>
         )
     }

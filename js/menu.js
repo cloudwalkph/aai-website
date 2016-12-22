@@ -83,7 +83,7 @@ const NavBar = React.createClass({
     componentDidMount () {
         $('.button-collapse').sideNav({
                 menuWidth: 300, // Default is 240
-                edge: 'left', // Choose the horizontal origin
+                edge: 'right', // Choose the horizontal origin
                 closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
                 draggable: true // Choose whether you can drag to open on touch screens
             }
@@ -107,9 +107,11 @@ const NavBar = React.createClass({
                 <div className="navbar-fixed">
                     <nav className="white z-depth-0">
                         <div className="nav-wrapper container">
-                            <a className="brand-logo" onClick={this.selectMenu.bind(this, 'home')}>
-                                <img className="responsive-img" src="img/logo.png" />
-                            </a>
+                            <div className="valign-wrapper">
+                                <a className="brand-logo" onClick={this.selectMenu.bind(this, 'home')}>
+                                    <img className="responsive-img" src="img/logo.png" />
+                                </a>
+                            </div>
                             <a data-activates="slide-out" className="button-collapse">
                                 <i className="material-icons grey-text text-darken-3">menu</i>
                             </a>
@@ -117,7 +119,10 @@ const NavBar = React.createClass({
                                 { this.state.menuData.map(function(v, i) {
                                     if(v.id === 'services') {
                                         return(
-                                            <li key={v.id}>
+                                            <li
+                                                key={v.id}
+                                                className={this.state.activeMenu == v.id ? 'active' : ''}
+                                            >
                                                 <a 
                                                     className={v.class}
                                                     onClick={this.selectMenu.bind(this, v.id)}
@@ -167,7 +172,10 @@ const NavBar = React.createClass({
                                                 <ul>
                                                     { this.state.servicesData.map(function(vSd, iSd){
                                                         return(
-                                                            <li key={vSd.id}>
+                                                            <li
+                                                                key={vSd.id}
+                                                                className={this.state.activeMenu == vSd.id ? 'active' : ''}
+                                                            >
                                                                 <a href="#!" onClick={this.selectMenu.bind(this, vSd.id)}>{vSd.page}</a>
                                                             </li>
                                                         )
@@ -180,7 +188,10 @@ const NavBar = React.createClass({
                             )
                         } else {
                             return(
-                                <li key={v.id} className={this.state.activeMenu == v.id ? 'active' : ''}>
+                                <li
+                                    key={v.id}
+                                    className={this.state.activeMenu == v.id ? 'active' : ''}
+                                >
                                     <a 
                                         className="waves-effect"
                                         onClick={this.selectMenu.bind(this, v.id)}
@@ -193,7 +204,10 @@ const NavBar = React.createClass({
                 <ul id="services-dropdown" className="dropdown-content">
                     { this.state.servicesData.map(function(vSd, iSd){
                         return(
-                            <li key={vSd.id}>
+                            <li
+                                key={vSd.id}
+                                className={this.state.activeMenu == vSd.id ? 'active' : ''}
+                            >
                                 <a href="#!" onClick={this.selectMenu.bind(this, vSd.id)}>{vSd.page}</a>
                             </li>
                         )

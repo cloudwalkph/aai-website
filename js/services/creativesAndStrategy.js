@@ -4,7 +4,6 @@ const CreativesAndStrategy = React.createClass({
 
     componentDidMount () {
         $('.parallax').parallax();
-        $('.screenImageHeight').height(screen.height);
         $('html,body').animate({scrollTop:0},1000);
     },
 
@@ -27,17 +26,17 @@ const CreativesAndStrategy = React.createClass({
     render() {
         return(
             <div>
-                <div className="section screenImageHeight">
-                    <center>
+                <div className="screenImageHeight valign-wrapper">
+                    <div className="container center-align">
                         <img className="responsive-img" src="img/creativesAndStrategy/top.png" />
-                    </center>
+                    </div>
                 </div>
 
                 <div className="parallax-container valign-wrapper">
                     <div className="row container">
                         <div className="col s12 m12 l6 right-align valign">
-                            <h5>Engaging <span className="orange-text">Creative</span> <br />Based on <span className="orange-text">Informed Strategy</span></h5>
-                            <p className="brown-text text-brown-4">Our team of advertising professionals and creatives - all with years of industry experience, work tirelessly to ensure that an efficient and effective plan is followed in order to meet or exceed our clients' goals and expectations.</p>
+                            <h5 className="headline">Engaging <span className="aai_orange">Creative</span> <br />Based on <span className="aai_orange">Informed Strategy</span></h5>
+                            <p>Our team of advertising professionals and creatives - all with years of industry experience, work tirelessly to ensure that an efficient and effective plan is followed in order to meet or exceed our clients' goals and expectations.</p>
                         </div>
                     </div>
                     <div className="parallax">
@@ -45,7 +44,7 @@ const CreativesAndStrategy = React.createClass({
                     </div>
                 </div>
 
-                <div style={{width: '100%'}}>
+                <div className="video-container">
                     <video
                         onMouseEnter={this.playVideo}
                         onMouseOut={this.pauseVideo}

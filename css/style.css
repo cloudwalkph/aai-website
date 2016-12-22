@@ -53,6 +53,10 @@ main {
 
 /* custom styles */
 
+.brand-logo {
+    margin-top: 5px;
+}
+
 nav ul a {
     font-family: 'Gotham Book';
     color: #beb9b6;
@@ -86,12 +90,31 @@ nav li.active a {
     text-transform: uppercase;
 }
 
-.slider .slides li .caption p {
+h3, h4 {
+    font-family: 'Gotham Medium';
+    color: #464241;
+}
+
+#title, .screenImageHeight {
+    height: 90vh;
+}
+
+p {
     font-family: 'Gotham Book';
     color: #464241;
     text-align: justify;
+}
+
+center {
+    font-family: 'Gotham Book';
+    color: #464241;
+}
+
+.slider .slides li .caption p {
+    color: #464241;
+    text-align: justify;
     text-justify: auto;
-    -moz-text-align-last: right; /* Code for Firefox */
+    -moz-text-align-last: center; /* Code for Firefox */
     text-align-last: center;
     font-size: 15px;
 }
@@ -133,35 +156,44 @@ strong {
     text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0,0,0,.7)
 }
 
-.footer_icon svg {
-    width: 24px;
-    height: 24px;
+i.material-icons {
     vertical-align: middle;
 }
 
+footer.page-footer .footer-copyright {
+    font-family: 'Gotham Book';
+    color: #868686;
+}
+
+.contact_icon:hover {
+    cursor: pointer;
+}
+.contact_icon path {
+    fill: #868686;
+}
+.contact_icon:hover path {
+    fill: #464241;
+}
+
+.footer_icon:hover {
+    cursor: pointer;
+}
+.footer_icon svg {
+    width: 24px;
+    height: 24px;
+}
 .footer_icon path {
-    fill: #757575;
+    fill: #868686;
 }
-
-.footer-copyright {
-    display: -webkit-flex; /* Safari */  
-    display: flex;
-    -webkit-align-items: center; /* Safari 7.0+ */
-    align-items: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-}
-
-.footer_icon {
-    vertical-align: center;
+.footer_icon:hover path {
+    fill: #464241;
 }
 
 /*MATERIALIZE*/
 
 .slider .indicators .indicator-item.active {
-  background-color: #ff9100;
+    background-color: #ff9100;
 }
-
 
 .buttonHoverAnimate {
   animation-name : rotateAnimate;
@@ -186,9 +218,13 @@ strong {
 
 }
 
+.card-action > .btn {
+   width: 100%;
+}
+
 @keyframes rotateAnimate {
-  from {transform: rotateX(180deg);}
-  to {transform: rotateX(360deg);}
+  from {transform: rotateX(180deg); opacity: 0}
+  to {transform: rotateX(360deg); opacity: 1}
 }
 
 .fontSizeParagraph {

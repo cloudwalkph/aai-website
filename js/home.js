@@ -11,12 +11,12 @@ const Home = React.createClass({
                     imageMobile : 'img/aai_logo.png',
                     title: [
                         <span> Advertising that go </span>, 
-                        <span className="orange-text text-accent-3"> Beyond </span>, 
+                        <span className="aai_orange"> Beyond </span>, 
                         <span> Expectations </span>
                     ],
                     titleMobile: [
                         <span> Advertising that go </span>, 
-                        <span className="orange-text text-accent-3"> Beyond </span>, 
+                        <span className="aai_orange"> Beyond </span>, 
                         <span> Expectations </span>
                     ],
                     context: [
@@ -77,7 +77,7 @@ const Home = React.createClass({
                     contextClass: 'flow-text',
                     contextClassMobile: 'flow-text',
                     buttonLabel: 'Read More',
-                    buttonName: 'brandActivations'
+                    buttonName: 'news'
                 },
                 {
                     captionClass: 'col s12 l4',
@@ -171,7 +171,7 @@ const Home = React.createClass({
                     </ul>
                 </div>
 
-                <div className="slider hide-on-med-and-up"> {/*MOBILE VIEW*/}
+                <div className="slider hide-on-large-only"> {/*MOBILE VIEW*/}
                     <ul className="slides white">
                     { this.state.sliderData.map(function(v,i) {
                         return (

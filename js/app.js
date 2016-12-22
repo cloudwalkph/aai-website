@@ -14,7 +14,8 @@ const BrandActivations = require('./services/brandActivations');
 const Events = require('./services/events');
 const Sampling = require('./services/sampling');
 const DesignAndProduction = require('./services/designAndProduction');
-const CreativesAndStrategy = require('./services/creativesAndStrategy');
+// const CreativesAndStrategy = require('./services/creativesAndStrategy');
+const DataAndAnalytics = require('./services/dataAndAnalytics');
 const TieUpsAndPartnerships = require('./services/tieUpsAndPartnerships');
 
 var App = React.createClass({
@@ -59,7 +60,7 @@ var App = React.createClass({
                     { this.state.page == 'events' ? <Events /> : '' }
                     { this.state.page == 'sampling' ? <Sampling /> : '' }
                     { this.state.page == 'designAndProduction' ? <DesignAndProduction /> : '' }
-                    { this.state.page == 'creativesAndStrategy' ? <CreativesAndStrategy /> : '' }
+                    { this.state.page == 'dataAndAnalytics' ? <DataAndAnalytics /> : '' }
                     { this.state.page == 'tieUpsAndPartnerships' ? <TieUpsAndPartnerships /> : '' }
                 </main>
 
