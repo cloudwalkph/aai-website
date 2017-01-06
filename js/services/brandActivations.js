@@ -158,10 +158,10 @@ const BrandActivations = React.createClass({
                         onMouseOut={this.pauseVideo}
                         onClick={this.handleClick}
                         loop=""
-                        poster="http://assets.yeticycles.com/images/bikes/sb6/2014_Kootenays_SB6_Enviorment-cover.jpg" 
+                        poster="img/brandActivations/vid-placeholder.jpg" 
                         className="responsive-video"
                     >
-                        <source src="http://assets.yeticycles.com/video/2014_Kootenays_SB6_Enviorment_HD.mp4" type="video/mp4" />
+                        <source />
                     </video>
                 </div>
 

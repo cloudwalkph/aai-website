@@ -60,7 +60,7 @@ const TieUpsAndPartnerships = React.createClass({
                         poster="img/tieUpsAndPartnerships/vid_placeholder.jpg" 
                         className="responsive-video"
                     >
-                        <source src="http://assets.yeticycles.com/video/2016_NewZealand_SB55_Enviorment_HD.mp4" type="video/mp4" />
+                        <source />
                     </video>
                 </div>
 

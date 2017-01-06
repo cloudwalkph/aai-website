@@ -67,10 +67,10 @@ const Events = React.createClass({
                         onMouseOut={this.pauseVideo}
                         onClick={this.handleClick}
                         loop=""
-                        poster="http://assets.yeticycles.com/images/bikes/sb55/2016_NewZealand_SB55_Enviorment-cover.jpg" 
+                        poster="img/events/vid-placeholder.jpg" 
                         className="responsive-video"
                     >
-                        <source src="http://assets.yeticycles.com/video/2016_NewZealand_SB55_Enviorment_HD.mp4" type="video/mp4" />
+                        <source />
                     </video>
                 </div>
 
