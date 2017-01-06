@@ -107,7 +107,7 @@ const NavBar = React.createClass({
                 <div className="navbar-fixed">
                     <nav className="white z-depth-0">
                         <div className="nav-wrapper container">
-                            <div className="valign-wrapper">
+                            <div>
                                 <a className="brand-logo" onClick={this.selectMenu.bind(this, 'home')}>
                                     <img className="responsive-img" src="img/logo.png" />
                                 </a>
