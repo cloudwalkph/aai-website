@@ -110,7 +110,8 @@ const Home = React.createClass({
 
     componentDidMount () {
         $('.slider').slider({
-            height: screen.height
+            height: screen.height,
+            interval : 500000
         });
     },
 
@@ -142,7 +143,7 @@ const Home = React.createClass({
                             <li key={i}>
                                 <img width="100%" src={v.image} />
 
-                                <div className="caption">
+                                <div className="caption valign-wrapper" style={{height : '70vh'}}>
                                     <div className="row">
                                         <div className={v.captionClass}>
                                             <h4 className="headline">
@@ -171,7 +172,7 @@ const Home = React.createClass({
                     </ul>
                 </div>
 
-                <div className="slider hide-on-large-only"> {/*MOBILE VIEW*/}
+                <div className="slider hide-on-large-only" style={{height : '100vh'}}> {/*MOBILE VIEW*/}
                     <ul className="slides white">
                     { this.state.sliderData.map(function(v,i) {
                         return (
@@ -180,7 +181,7 @@ const Home = React.createClass({
                                     <div className="row">
                                         <div className="card z-depth-0">
                                             <div className="card-image">
-                                                <img className="responsive-img" src={v.imageMobile} />
+                                                <img src={v.imageMobile} style={{width : '100%'}} />
                                                 <span className="card-title"></span>
                                             </div>
                                             <div className="card-content">

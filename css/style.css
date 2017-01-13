@@ -86,7 +86,7 @@ nav li.active a {
 
 .headline {
     font-family: 'Norwester';
-    color: #222d4e;
+    color: #0b3757;
     text-transform: uppercase;
 }
 
@@ -233,6 +233,19 @@ footer.page-footer .footer-copyright {
 
 .hide-on-med-and-up .slides li img {
   background-position: 50% !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .indicators {
+    display: none;
+  }
+  .slider {
+    height : 90vh !important;
+  }
+  .slider .slides li img {
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
 }
 
         

@@ -75,7 +75,8 @@ const Services = React.createClass({
 
     changeImage(e) {
         $(this.refs[e]).find('img').attr('src', this.state.servicesData[e].hoverImg);
-        $(this.refs[e]).find('.card-action').children('a').removeClass('hide-on-med-and-up').addClass('buttonHoverAnimate');
+        // $(this.refs[e]).find('.card-action').children('a').removeClass('hide-on-med-and-up').addClass('buttonHoverAnimate');
+        $(this.refs[e]).find('.card-action').children('a').removeClass('hide-on-med-and-up');
     },
 
     revertImage(e) {
