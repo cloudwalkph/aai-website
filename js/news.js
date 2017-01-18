@@ -50,7 +50,8 @@ const News = React.createClass({
 
     handleMouseEnter(e) {
 		$(this.refs[e]).find('.card-image').animate({backgroundSize: '110%'}, 60);
-    	$(this.refs[e]).find('.card-action').children('a').removeClass('hide-on-med-and-up').addClass('buttonHoverAnimate');
+    	// $(this.refs[e]).find('.card-action').children('a').removeClass('hide-on-med-and-up').addClass('buttonHoverAnimate');
+    	$(this.refs[e]).find('.card-action').children('a').removeClass('hide-on-med-and-up');
     },
 
     handleMouseLeave(e) {
@@ -62,7 +63,7 @@ const News = React.createClass({
         return(
             <div className="section">
 
-				<div className="screenImageHeight section valign-wrapper">
+				<div className="section valign-wrapper">
 					<div className="container center-align">
 						<img className="responsive-img" src="img/news.png" />
 					</div>

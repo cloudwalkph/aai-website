@@ -26,7 +26,7 @@ const Events = React.createClass({
     render() {
         return(
             <div>
-                <div className="screenImageHeight valign-wrapper">
+                <div className="valign-wrapper">
                     <div className="container center-align">
                         <img className="responsive-img" src="img/events/Events.png" />
                     </div>

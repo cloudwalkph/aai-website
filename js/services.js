@@ -19,7 +19,7 @@ const Services = React.createClass({
                     img: 'img/pic2.jpg',
                     hoverImg: 'img/pic2.png',
                     content: [
-                        'Create newsworthy moments or simply make a day truly unforgettable.',
+                    <span>Create newsworthy moments or simply make a day truly unforgettable. <br/><br/></span>,
                         'From concept, planning to execution, we run PR events, product launches and awards shows that make any date extraordinary.'
                     ]
                 },
@@ -88,7 +88,7 @@ const Services = React.createClass({
         return(
             <div>
 
-                <div className="screenImageHeight section valign-wrapper">
+                <div className="section valign-wrapper">
 					<div className="container center-align">
                         <img className="responsive-img" src="img/ourservices.png" />
                     </div>
@@ -100,7 +100,8 @@ const Services = React.createClass({
                         <p>New innovations in video monitoring, consumer tracking and data acquisition gives our clients an abundance of clear perspectives and valuable insights whenever and wherever a project is taking place.</p>
                     </div>
                 </div>
-                
+                <br/>
+                <br/>
                 <div className="section">
                     <div className="container">
                         <div className="row">

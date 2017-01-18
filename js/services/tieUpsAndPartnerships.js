@@ -26,7 +26,7 @@ const TieUpsAndPartnerships = React.createClass({
     render() {
         return(
             <div>
-                <div className="screenImageHeight valign-wrapper">
+                <div className="valign-wrapper">
                     <div className="container center-align">
                         <img className="responsive-img" src="img/tieUpsAndPartnerships/Tie_ups_and_Partnership.png" />
                     </div>

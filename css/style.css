@@ -101,8 +101,12 @@ h3, h4 {
 
 p {
     font-family: 'Gotham Book';
-    color: #464241;
+    color: #464646;
     text-align: justify;
+}
+
+i .material-icons {
+  color : #b5b5b5;
 }
 
 center {
@@ -220,6 +224,10 @@ footer.page-footer .footer-copyright {
 
 .card-action > .btn {
    width: 100%;
+}
+
+.card.large {
+  padding : 0 20px;
 }
 
 @keyframes rotateAnimate {

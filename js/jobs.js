@@ -6,7 +6,7 @@ const Jobs = React.createClass({
         return(
             <div>
 
-                <div className="screenImageHeight section valign-wrapper">
+                <div className="section valign-wrapper" style={{paddingTop : '2.3rem'}}>
 					<div className="container center-align">
                         <img className="responsive-img" src="img/jobs.png" />
                     </div>

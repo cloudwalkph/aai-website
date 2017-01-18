@@ -100,7 +100,7 @@ const BrandActivations = React.createClass({
     render() {
         return(
             <div>
-                <div className="screenImageHeight valign-wrapper">
+                <div className="valign-wrapper">
                     <div className="container center-align">
                         <img className="responsive-img" src="img/brandActivations/BrandActivations.png" alt="Breeze sets a New Guiness World Record" />
                     </div>
