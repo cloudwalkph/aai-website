@@ -248,11 +248,48 @@ footer.page-footer .footer-copyright {
     display: none;
   }
   .slider {
-    height : 90vh !important;
+    height : 1000px !important;
+  }
+  .slider .slides {
+    height : 1000px !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .indicators {
+    display: none;
+  }
+  .slider {
+    height : 1000px !important;
+  }
+  .slider .slides {
+    height : 1000px !important;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .indicators {
+    display: none;
+  }
+  .slider {
+    height : 700px !important;
+  }
+  .slider .slides {
+    height : 700px !important;
   }
   .slider .slides li img {
     background-size: contain;
     background-repeat: no-repeat;
+    height: 170px;
+  }
+  .rightNavi {
+    top : 20%;
+  }
+  .leftNavi {
+    top : 20%;
+  }
+  .slider .slides li .caption p {
+    margin : 15px 0;
   }
 }
 

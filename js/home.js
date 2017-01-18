@@ -186,9 +186,7 @@ const Home = React.createClass({
                                             </div>
                                             <div className="card-content">
                                                 <center>
-                                                    <h5
-                                                        className="cyan-text text-darken-4"
-                                                    >
+                                                    <h5 className="headline">
                                                     { v.titleMobile.map(function(vt, it) {
                                                         return(
                                                             <span key={it}>{vt}</span>
@@ -198,7 +196,7 @@ const Home = React.createClass({
                                                 </center>
                                                 { v.contextMobile.map(function(vc, ic) {
                                                     return(
-                                                        <p key={vc} className={v.contextClassMobile} style={{textAlign : 'justify'}}>{vc}</p>
+                                                        <p key={vc} className={v.contextClassMobile}>{vc}</p>
                                                     )
                                                 }.bind(this))}
                                             </div>
