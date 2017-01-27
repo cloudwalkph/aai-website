@@ -112,7 +112,7 @@ const NavBar = React.createClass({
                                     <img className="responsive-img" src="img/logo.png" />
                                 </a>
                             </div>
-                            <a data-activates="slide-out" className="button-collapse">
+                            <a data-activates="slide-out" className="button-collapse right">
                                 <i className="material-icons grey-text text-darken-3">menu</i>
                             </a>
                             <ul className="right hide-on-med-and-down">
@@ -167,7 +167,7 @@ const NavBar = React.createClass({
                                 <li key={i} className="no-padding">
                                     <ul className="collapsible collapsible-accordion">
                                         <li>
-                                            <a className="collapsible-header">{v.page}<i className="material-icons">arrow_drop_down</i></a>
+                                            <a className="collapsible-header" onClick={this.selectMenu.bind(this, v.id)}>{v.page}<i className="material-icons">arrow_drop_down</i></a>
                                             <div className="collapsible-body">
                                                 <ul>
                                                     { this.state.servicesData.map(function(vSd, iSd){

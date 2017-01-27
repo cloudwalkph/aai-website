@@ -253,6 +253,20 @@ footer.page-footer .footer-copyright {
   .slider .slides {
     height : 1000px !important;
   }
+  .slider .slides li img {
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .rightNavi {
+    top : 38%;
+  }
+  .leftNavi {
+    top : 38%;
+  }
+  .parallax img {
+    width: 340%;
+    min-height: 74%;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -264,6 +278,16 @@ footer.page-footer .footer-copyright {
   }
   .slider .slides {
     height : 1000px !important;
+  }
+  .slider .slides li img {
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .rightNavi {
+    top : 38%;
+  }
+  .leftNavi {
+    top : 38%;
   }
 }
 
