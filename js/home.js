@@ -137,7 +137,7 @@ const Home = React.createClass({
     },
 
     handleClick(page) {
-        this.props.getPage(page);
+        this.props.getPage(page.buttonName);
     },
 
     handleSliderNavigation(e) {
@@ -180,7 +180,7 @@ const Home = React.createClass({
                                                 )
                                             }.bind(this))}
                                             <a
-                                                onClick={this.handleClick.bind(this, v.buttonName)}
+                                                onClick={this.handleClick.bind(this, v)}
                                                 className="waves-effect waves-aai_btn btn z-depth-0"
                                             >{v.buttonLabel}</a>
                                         </div>

@@ -10,7 +10,7 @@ const CardType = React.createClass({
 
     getInitialState () {
         return ({
-            articleData: this.props.articleData
+            article: this.props.article
         })
     },
 
@@ -31,13 +31,13 @@ const CardType = React.createClass({
                     <div className="col s12">
                         <div className="card z-depth-0">
                             <div className="card-image">
-                                <img src={this.state.articleData.img[0]} />
+                                <img src={this.state.article.img[0]} />
                             </div>
                             <div className="card-content">
                                 <span className="card-title grey-text text-darken-4">
-                                    <b>{this.state.articleData.title}</b>
+                                    <b>{this.state.article.title}</b>
                                 </span>
-                                { this.state.articleData.context.map(function(v,i){
+                                { this.state.article.context.map(function(v,i){
                                     return(
                                         <p key={i}>{v}</p>
                                     )
