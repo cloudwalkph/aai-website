@@ -106,6 +106,7 @@ const BrandActivations = React.createClass({
                     </div>
                 </div>
 
+                {/*SHOW PC ONLY*/}
                 <div className="parallax-container valign-wrapper hide-on-med-and-down">
                     <div className="row">
                         <div className="col s12 m12 l4 offset-l2 right-align valign">
@@ -119,18 +120,17 @@ const BrandActivations = React.createClass({
                         <img src="img/brandActivations/experiences-that-truly-matter.jpg" />
                     </div>
                 </div>
-
                 {/*SHOW MOBILE ONLY*/}
-                <div className="valign-wrapper hide-on-large-only">
+                <div className="hide-on-large-only">
                     <div className="row">
-                        <div className="col s12 right-align valign">
+                        <img src="img/brandActivations/experiences-that-truly-matter2.jpg" style={{width : '140%'}} />
+                    </div>
+                    <div className="row">
+                        <div className="col s12 center-align valign">
                             <h5 className="headline">
                                 <span className="aai_orange">Experiences</span> that <br />Truly Matter
                             </h5>
-                            <p className="right-align">We create experiences the are truly memorable. From trying out a new product for the first time, or simply sharing a unique moment, we create activation campaigns that deliver our clients' message in the most profound way.</p>
-                        </div>
-                        <div className="col s12">
-                            <img src="img/brandActivations/experiences-that-truly-matter2.jpg" style={{width : '100%'}} />
+                            <p className="center-align">We create experiences the are truly memorable. From trying out a new product for the first time, or simply sharing a unique moment, we create activation campaigns that deliver our clients' message in the most profound way.</p>
                         </div>
                     </div>
                 </div>

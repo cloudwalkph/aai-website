@@ -32,7 +32,8 @@ const Events = React.createClass({
                     </div>
                 </div>
 
-                <div className="parallax-container">
+                {/*SHOW PC ONLY*/}
+                <div className="parallax-container hide-on-med-and-down">
                     <div className="section">
                         <div className="row container">
                             <div className="col s12 m12 l5 center-align">
@@ -44,8 +45,27 @@ const Events = React.createClass({
                         <img src="img/events/image2.jpg" />
                     </div>
                 </div>
+                {/*SHOW MOBILE ONLY*/}
+                <div className="hide-on-large-only">
+                    <div className="row">
+                        <img src="img/events/eventHead.jpg" style={{width : '170%',transform: 'translate3d(-38%, 0px, 17px)'}} />
+                    </div>
+                    <div className="row">
+                        <div className="col s12 center-align valign">
+                            <h4 className="headline">Big or Small, What Truly Matters are the <span className="aai_orange">Moments</span></h4>
+                            <p className="center-align">An event is simply a series of amazing experiences shared ine one moment.</p>
+                            <p className="center-align">
+                                Whether it's a grand concert enjoyed by thousands of fans, a sporting
+                                spectable watched by the whole world, or an intimate product unveiling,
+                                we create events to create memorable moments that will be remembered by
+                                those who experience it.
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
-                <div className="parallax-container valign-wrapper">
+                {/*SHOW PC ONLY*/}
+                <div className="parallax-container valign-wrapper hide-on-med-and-down">
 
                     <div className="row container">
                         <div className="col s12 m12 l6 offset-l6 center-align valign">
@@ -59,7 +79,19 @@ const Events = React.createClass({
                         <img src="img/events/run-to-your-beat.jpg" />
                     </div>
                 </div>
-
+                {/*SHOW MOBILE ONLY*/}
+                <div className="hide-on-large-only">
+                    <div className="row">
+                        <img src="img/events/runtoyourbeat1.jpg" style={{width : '100%'}} />
+                    </div>
+                    <div className="row">
+                        <div className="col s12 center-align valign">
+                            <h4 className="headline text_engrave"><span className="aai_orange">Plan</span> it. <span className="aai_orange">Do</span> it. <span className="aai_orange">Live</span> it.</h4>
+                            <p>We are fully equipped to mount unique and tailor-fit events of all sizes from anywhere in the Philippines.</p>
+                            <p>A dedicated team of experts ensures that that the entire process of making an event runs smoothly from planning, logistics and implementation in order to exceed the expectations of all our clients.</p>
+                        </div>
+                    </div>
+                </div>
 
                 <div style={{width: '100%'}}>
                     <video
