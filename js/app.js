@@ -18,6 +18,9 @@ const DesignAndProduction = require('./services/designAndProduction');
 const DataAndAnalytics = require('./services/dataAndAnalytics');
 const TieUpsAndPartnerships = require('./services/tieUpsAndPartnerships');
 
+const CardType = require('./news/articles/cardType');
+const CarouselType = require('./news/articles/carouselType');
+
 var App = React.createClass({
     propTypes: {
         page: React.PropTypes.string
@@ -35,9 +38,17 @@ var App = React.createClass({
         };
     },
 
-    getPage(page) {
+    getPage(page, data) {
         this.setState({
-            page: page
+            page: page,
+            data: data
+        })
+    },
+
+    getArticle(articleData) {
+        this.setState({
+            page: 'article',
+            articleData: articleData
         })
     },
 
@@ -51,7 +62,7 @@ var App = React.createClass({
                 <main>
                     { this.state.page == 'home' ? <Home getPage={this.getPage} /> : '' }
                     { this.state.page == 'services' ? <Services getPage={this.getPage} /> : '' }
-                    { this.state.page == 'news' ? <News /> : '' }
+                    { this.state.page == 'news' ? <News getArticle={this.getArticle} /> : '' }
                     { this.state.page == 'about' ? <About /> : '' }
                     { this.state.page == 'jobs' ? <Jobs /> : '' }
                     { this.state.page == 'contact' ? <Contact /> : '' }
@@ -62,6 +73,8 @@ var App = React.createClass({
                     { this.state.page == 'designAndProduction' ? <DesignAndProduction /> : '' }
                     { this.state.page == 'dataAndAnalytics' ? <DataAndAnalytics /> : '' }
                     { this.state.page == 'tieUpsAndPartnerships' ? <TieUpsAndPartnerships /> : '' }
+
+                    { this.state.page == 'article' ? <CardType articleData={this.state.articleData} /> : ''}
                 </main>
 
                 <Footer />

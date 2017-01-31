@@ -174,37 +174,37 @@ const Home = React.createClass({
 
                 <div className="slider hide-on-large-only" style={{height : '100vh'}}> {/*MOBILE VIEW*/}
                     <ul className="slides white">
-                    { this.state.sliderData.map(function(v,i) {
+                    { this.state.sliderData.map(function(vm,im) {
                         return (
-                            <li key={i}>
+                            <li key={im}>
                                 <div className="caption" style={{top: 0,left: 0,width: '100%'}}>
                                     <div className="row">
                                         <div className="card z-depth-0">
                                             <div className="card-image">
-                                                <img src={v.imageMobile} style={{width : '100%'}} />
+                                                <img src={vm.imageMobile} style={{width : '100%'}} />
                                                 <span className="card-title"></span>
                                             </div>
                                             <div className="card-content">
                                                 <center>
                                                     <h5 className="headline">
-                                                    { v.titleMobile.map(function(vt, it) {
+                                                    { vm.titleMobile.map(function(vtm, itm) {
                                                         return(
-                                                            <span key={it}>{vt}</span>
+                                                            <span key={itm}>{vtm}</span>
                                                         )})
                                                     }
                                                     </h5>
                                                 </center>
-                                                { v.contextMobile.map(function(vc, ic) {
+                                                { vm.contextMobile.map(function(vcm, icm) {
                                                     return(
-                                                        <p key={vc} className={v.contextClassMobile}>{vc}</p>
+                                                        <p key={icm} className={vm.contextClassMobile}>{vcm}</p>
                                                     )
                                                 }.bind(this))}
                                             </div>
                                             <div className="card-action" onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
                                                 <a
-                                                    onClick={this.handleClick.bind(this, v.buttonName)}
+                                                    onClick={this.handleClick.bind(this, vm.buttonName)}
                                                     className="waves-effect waves-orange orange accent-3 btn z-depth-0"
-                                                >{v.buttonLabel}</a>
+                                                >{vm.buttonLabel}</a>
                                             </div>
                                         </div>
                                     </div>
