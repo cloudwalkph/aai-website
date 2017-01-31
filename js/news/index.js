@@ -15,11 +15,11 @@ const News = React.createClass({
 						'The Power of Samsung Showcase was the one day when the whole might of Samsung was apparent for everyone to see and a big reminder of how technology has changed human lives forever.'
 					],
 					img: [
-						'img/uploads/Samsung 01.jpg',
-						'img/uploads/Samsung 02.jpg',
-						'img/uploads/Samsung 03.jpg'
+						'img/uploads/samsung_01.jpg',
+						'img/uploads/samsung_02.jpg',
+						'img/uploads/samsung_03.jpg'
 					],
-					imgFront: 'img/uploads/Samsung 01.jpg',
+					imgFront: 'img/uploads/samsung_01.jpg',
 				},
 				{
 					id: 'greenwich',
@@ -30,10 +30,10 @@ const News = React.createClass({
 						<span>The Grand Finals in the Valkyrie lived up to all the hype with all 8 finalists performing in front of fans and judges including UpDharmaDown&rsquo;s Armi Millare. In the end, it was PLETHORA who lifted the crown winning a large cash prize, a recording contract with Viva records and, most importantly, the crown of being The Greenwich Ultimate BandKada.</span>
 					],
 					img: [
-						'img/uploads/Greenwich 01.jpg',
-						'img/uploads/Greenwich 02.jpg',
-						'img/uploads/Greenwich 03.jpg',
-						'img/uploads/Greenwich 04.jpg'
+						'img/uploads/greenwich_01.jpg',
+						'img/uploads/greenwich_02.jpg',
+						'img/uploads/greenwich_03.jpg',
+						'img/uploads/greenwich_04.jpg'
 					],
 					imgFront: 'img/news/barkada.png'
 				},
@@ -46,11 +46,11 @@ const News = React.createClass({
 						'Attended by celebrities and fans, the activation was heralded by both Happy Skin and Disney as a shining example of how to fantastic brands can work together, share inspiration and create something truly magical.'
 					],
 					img: [
-						'img/uploads/Happy Skin 01.jpg',
-						'img/uploads/Happy Skin 02.jpg',
-						'img/uploads/Happy Skin 03.jpg'
+						'img/uploads/happy_skin_01.jpg',
+						'img/uploads/happy_skin_02.jpg',
+						'img/uploads/happy_skin_03.jpg'
 					],
-					imgFront: 'img/uploads/Happy Skin 03.jpg'
+					imgFront: 'img/uploads/happy_skin_03.jpg'
 				}
 			]
 		})
@@ -108,6 +108,7 @@ const News = React.createClass({
 										<div className="card-image">
 											<img 
 												className="responsive-img"
+												style={{height: '158px'}}
 												src={v.imgFront}
 											/>
 											<span className="card-title"></span>

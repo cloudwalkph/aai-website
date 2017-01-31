@@ -61,6 +61,27 @@ const Home = React.createClass({
                     buttonName: 'sampling'
                 },
                 {
+                    captionClass: 'col s12 l4',
+                    image: 'img/uploads/samsung_01.jpg',
+                    imageMobile : "img/uploads/samsung_01.jpg",
+                    title: [
+                        <span className="aai_orange"> AAI </span>, 
+                        <span className="white-text"> Helps Unleash the Power of </span>,
+                        <span className="aai_orange"> Samsung </span>
+                    ],
+                    titleMobile: [
+                        <span className="aai_orange"> AAI </span>, 
+                        <span className=""> Helps Unleash the Power of </span>,
+                        <span className="aai_orange"> Samsung </span>,
+                    ],
+                    context: [],
+                    contextMobile: [],
+                    contextClass: 'flow-text',
+                    contextClassMobile: 'flow-text',
+                    buttonLabel: 'Read More',
+                    buttonName: 'samsung'
+                },
+                {
                     captionClass: 'col s12 l3 right right-align',
                     image: 'img/home/happy_skin.jpg',
                     imageMobile : 'img/home/happy_skin.jpg',
@@ -77,7 +98,7 @@ const Home = React.createClass({
                     contextClass: 'flow-text',
                     contextClassMobile: 'flow-text',
                     buttonLabel: 'Read More',
-                    buttonName: 'news'
+                    buttonName: 'happy_skin'
                 },
                 {
                     captionClass: 'col s12 l4',
@@ -96,7 +117,7 @@ const Home = React.createClass({
                     contextClass: 'flow-text white-text',
                     contextClassMobile: 'flow-text',
                     buttonLabel: 'Read More',
-                    buttonName: 'news'
+                    buttonName: 'greenwich'
                 }
             ]
         }
