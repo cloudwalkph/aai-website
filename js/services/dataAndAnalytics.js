@@ -26,7 +26,8 @@ const DataAndAnalytics = React.createClass({
     render() {
         return(
             <div>
-                <div className="parallax-container valign-wrapper">
+                {/*SHOW PC ONLY*/}
+                <div className="parallax-container valign-wrapper hide-on-med-and-down">
                     <div className="container">
                         <div className="row">
                             <div className="col s12 m12 l4 offset-l1 right-align valign">
@@ -45,6 +46,19 @@ const DataAndAnalytics = React.createClass({
                     </div>
                 </div>
 
+                {/*SHOW MOBILE ONLY*/}
+                <div className="hide-on-large-only">
+                    <div className="row">
+                        <img src="img/dataAndAnalytics/image1.jpg" style={{width : '160%',transform: 'translate3d(-34%, 0, 0)'}} />
+                    </div>
+                    <div className="row">
+                        <div className="col s12 center-align valign">
+                            <h5 className="headline"><span className="aai_orange">On-ground</span> knowledge and information.</h5>
+                            <p className="right-align">We provide a comprehensive and regularly updated database of important on-ground venues like malls, schools, offices, LGUs and local communities.</p>
+                            <p className="right-align">These include key information like population, demographics, foot-traffic, rates and venue measurements that will be essential in the planning and implementation of all on-ground projects.</p>
+                        </div>
+                    </div>
+                </div>
                 <div className="video-container">
                     <video
                         onMouseEnter={this.playVideo}

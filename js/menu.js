@@ -53,9 +53,13 @@ const NavBar = React.createClass({
                     id: 'designAndProduction',
                     page: 'Design And Production'
                 },
-                {
+                /*{
                     id: 'creativesAndStrategy',
                     page: 'Creatives And Strategy'
+                },*/
+                {
+                    id: 'dataAndAnalytics',
+                    page: 'Data And Analytics'
                 },
                 {
                     id: 'tieUpsAndPartnerships',

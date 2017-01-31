@@ -32,7 +32,8 @@ const Sampling = React.createClass({
                     </div>
                 </div>
 
-                <div className="parallax-container valign-wrapper">
+                {/*SHOW ONLY PC*/}
+                <div className="parallax-container valign-wrapper hide-on-med-and-down">
                     <div className="row container">
                         <div className="col s12 m12 l5 right-align valign">
                             <h5 className="headline">Sample <span className="aai_orange">Anywhere</span> to <span className="aai_orange">Anyone</span></h5>
@@ -44,8 +45,7 @@ const Sampling = React.createClass({
                         <img src="img/sampling/image1.jpg" />
                     </div>
                 </div>
-
-                <div className="parallax-container valign-wrapper">
+                <div className="parallax-container valign-wrapper hide-on-med-and-down">
                     <div className="row container">
                         <div className="col s12 m12 l5 offset-l7 left-align valign">
                             <h5 className="headline">Your Product Direct to <span className="aai_orange">Consumers</span></h5>
@@ -56,8 +56,7 @@ const Sampling = React.createClass({
                         <img src="img/sampling/image2.jpg" />
                     </div>
                 </div>
-
-                <div className="parallax-container valign-wrapper">
+                <div className="parallax-container valign-wrapper hide-on-med-and-down">
                     <div className="row container">
                         <div className="col s12 m12 l4 offset-l1 center-align valign">
                             <h3 className="headline">Accurate, Reliable and <span className="aai_orange">Verified</span></h3>
@@ -66,6 +65,42 @@ const Sampling = React.createClass({
                     </div>
                     <div className="parallax">
                         <img src="img/sampling/image3.jpg" />
+                    </div>
+                </div>
+
+                {/*SHOW MOBILE ONLY*/}
+                <div className="hide-on-large-only">
+                    <div className="row">
+                        <img src="img/sampling/image1.jpg" style={{width : '100%'}} />
+                    </div>
+                    <div className="row">
+                        <div className="col s12 center-align valign">
+                            <h5 className="headline">Sample <span className="aai_orange">Anywhere</span> to <span className="aai_orange">Anyone</span></h5>
+                            <p>A nationwide logistics and operations network, allows us to deploy massive sampling campaigns in all major cities and suburban areas in the Philippines.</p>
+                            <p>Our main facilities in Metro Manila and our satellite offices in Cebu and Davao provide convenient bases where the manpower and equipment needed to sample at scale can be concentrated and deployed everywhere.</p>
+                        </div>
+                    </div>
+                </div>
+                <div className="hide-on-large-only">
+                    <div className="row">
+                        <img src="img/sampling/image2.jpg" style={{width : '160%'}} />
+                    </div>
+                    <div className="row">
+                        <div className="col s12 center-align valign">
+                            <h5 className="headline">Your Product Direct to <span className="aai_orange">Consumers</span></h5>
+                            <p>With more than 200+ well-trained and experienced sampling experts, we can deliver your product and message to the consumer whenever or wherever you want to meet them.</p>
+                        </div>
+                    </div>
+                </div>
+                <div className="hide-on-large-only">
+                    <div className="row">
+                        <img src="img/sampling/image3.jpg" style={{width : '160%',transform: 'translate3d(-34%, 0 ,0)'}} />
+                    </div>
+                    <div className="row">
+                        <div className="col s12 center-align valign">
+                            <h3 className="headline">Accurate, Reliable and <span className="aai_orange">Verified</span></h3>
+                            <img src="img/sampling/verify.png" />
+                        </div>
                     </div>
                 </div>
 
