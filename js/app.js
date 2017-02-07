@@ -92,6 +92,10 @@ var App = React.createClass({
     getPage(page) {
         if(page == 'samsung') {
             this.getArticle(this.props.articleData[0]);
+        } else if(page == 'greenwich') {
+            this.getArticle(this.props.articleData[1]);
+        } else if(page == 'happy_skin') {
+            this.getArticle(this.props.articleData[2]);
         } else {
             this.setState({
                 page: page
