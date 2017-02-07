@@ -62,8 +62,8 @@ const Home = React.createClass({
                 },
                 {
                     captionClass: 'col s12 l4',
-                    image: 'img/uploads/samsung_01.jpg',
-                    imageMobile : "img/uploads/samsung_01.jpg",
+                    image: 'img/uploads/20160818_033844.jpg',
+                    imageMobile : "img/uploads/20160818_033844.jpg",
                     title: [
                         <span className="aai_orange"> AAI </span>, 
                         <span className="white-text"> Helps Unleash the Power of </span>,
