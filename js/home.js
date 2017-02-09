@@ -62,8 +62,8 @@ const Home = React.createClass({
                 },
                 {
                     captionClass: 'col s12 l4',
-                    image: 'img/uploads/samsung_01.jpg',
-                    imageMobile : "img/uploads/samsung_01.jpg",
+                    image: 'img/uploads/20160818_033844.jpg',
+                    imageMobile : "img/uploads/20160818_033844.jpg",
                     title: [
                         <span className="aai_orange"> AAI </span>, 
                         <span className="white-text"> Helps Unleash the Power of </span>,
@@ -136,7 +136,7 @@ const Home = React.createClass({
     },
 
     handleClick(page) {
-        this.props.getPage(page);
+        this.props.getPage(page.buttonName);
     },
 
     handleSliderNavigation(e) {
@@ -179,7 +179,7 @@ const Home = React.createClass({
                                                 )
                                             }.bind(this))}
                                             <a
-                                                onClick={this.handleClick.bind(this, v.buttonName)}
+                                                onClick={this.handleClick.bind(this, v)}
                                                 className="waves-effect waves-aai_btn btn z-depth-0"
                                             >{v.buttonLabel}</a>
                                         </div>
