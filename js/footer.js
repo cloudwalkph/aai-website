@@ -12,12 +12,12 @@ const Footer = React.createClass({
 
                 <div className="section">
                     <div className="footer-copyright white">
-                        <div className="container center-align">
+                        <div className="container center-align footer-text">
                             Copyright © 2016 Activations Advertising Inc. All rights reserved. &nbsp;
-
+                            <br/>
                             <span id="facebook" className="footer_icon">
                                 <i className="material-icons">
-                                    <svg viewBox="0 0 512 512">
+                                    <svg viewBox="90 40 310 450">
                                         <path fill="#000000" d="M211.9 197.4h-36.7v59.9h36.7V433.1h70.5V256.5h49.2l5.2-59.1h-54.4c0 0 0-22.1 0-33.7 0-13.9 2.8-19.5 16.3-19.5 10.9 0 38.2 0 38.2 0V82.9c0 0-40.2 0-48.8 0 -52.5 0-76.1 23.1-76.1 67.3C211.9 188.8 211.9 197.4 211.9 197.4z" />
                                     </svg>
                                 </i>
@@ -42,7 +42,7 @@ const Footer = React.createClass({
 
                             <span id="youtube" className="footer_icon">
                                 <i className="material-icons">
-                                    <svg viewBox="0 0 24 24">
+                                    <svg viewBox="2 2 20 20">
                                         <path fill="#000000" d="M10,16.5V7.5L16,12M20,4.4C19.4,4.2 15.7,4 12,4C8.3,4 4.6,4.19 4,4.38C2.44,4.9 2,8.4 2,12C2,15.59 2.44,19.1 4,19.61C4.6,19.81 8.3,20 12,20C15.7,20 19.4,19.81 20,19.61C21.56,19.1 22,15.59 22,12C22,8.4 21.56,4.91 20,4.4Z" />
                                     </svg>
                                 </i>

@@ -166,43 +166,17 @@ const NavBar = React.createClass({
                         </center>
                     </li>
                     { this.state.menuData.map(function(v, i) {
-                        if(v.id === 'services') {
-                            return(
-                                <li key={i} className="no-padding">
-                                    <ul className="collapsible collapsible-accordion">
-                                        <li>
-                                            <a className="collapsible-header" onClick={this.selectMenu.bind(this, v.id)}>{v.page}<i className="material-icons">arrow_drop_down</i></a>
-                                            <div className="collapsible-body">
-                                                <ul>
-                                                    { this.state.servicesData.map(function(vSd, iSd){
-                                                        return(
-                                                            <li
-                                                                key={vSd.id}
-                                                                className={this.state.activeMenu == vSd.id ? 'active' : ''}
-                                                            >
-                                                                <a href="#!" onClick={this.selectMenu.bind(this, vSd.id)}>{vSd.page}</a>
-                                                            </li>
-                                                        )
-                                                    }.bind(this))}
-                                                </ul>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </li>
-                            )
-                        } else {
-                            return(
-                                <li
-                                    key={v.id}
-                                    className={this.state.activeMenu == v.id ? 'active' : ''}
-                                >
-                                    <a 
-                                        className="waves-effect"
-                                        onClick={this.selectMenu.bind(this, v.id)}
-                                    >{v.page}</a>
-                                </li>
-                            )
-                        }
+                        return(
+                            <li
+                                key={v.id}
+                                className={this.state.activeMenu == v.id ? 'active' : ''}
+                            >
+                                <a 
+                                    className="waves-effect"
+                                    onClick={this.selectMenu.bind(this, v.id)}
+                                >{v.page}</a>
+                            </li>
+                        )
                     }.bind(this))}
                 </ul>
                 <ul id="services-dropdown" className="dropdown-content">

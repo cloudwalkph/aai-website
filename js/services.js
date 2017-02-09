@@ -89,20 +89,20 @@ const Services = React.createClass({
             <div>
 
                 <div className="section valign-wrapper">
-					<div className="container center-align">
+					<div className="container center-align" style={{padding : '30px 0'}}>
                         <img className="responsive-img" src="img/ourservices.png" />
                     </div>
                 </div>
 
                 <div className="section">
-                    <div className="container">
+                    <div className="container serviceContentParagraph">
                         <p>We deliver a diverse set of advertising services that caters to our clients constantly evolving needs. Being an integrated agency allows us to manage the entire project road map from initial concepts all the way to actual implementation.</p> 
                         <p>New innovations in video monitoring, consumer tracking and data acquisition gives our clients an abundance of clear perspectives and valuable insights whenever and wherever a project is taking place.</p>
                     </div>
                 </div>
                 <br/>
                 <br/>
-                <div className="section">
+                <div className="section hide-on-med-and-down"> {/*DESKTOP VIEW*/}
                     <div className="container">
                         <div className="row">
                         { this.state.servicesData.map(function(value, index) {
@@ -137,6 +137,31 @@ const Services = React.createClass({
                                         >
                                             <a className="btn hide-on-med-and-up z-depth-0">Learn More</a>
                                         </div>
+                                    </div>
+                                </div>
+                            )
+                        }.bind(this))}
+                            
+                        </div>
+                    </div>
+                </div>
+
+            	<div className="section hide-on-large-only"> {/*MOBILE VIEW*/}
+                    <div className="container">
+                        <div className="row">
+                        { this.state.servicesData.map(function(value, index) {
+                            return(
+                                <div
+                                    key={value.id}
+                                    className="col s12 m4 l4"
+                                    onClick={this.handleClick.bind(this, value.id)}
+                                >
+                                    <div className="card z-depth-0">
+                                        <div className="card-image">
+                                            <img className="responsive-img" src={value.img} />
+                                            <span className="card-title"></span>
+                                        </div>
+                                        
                                     </div>
                                 </div>
                             )

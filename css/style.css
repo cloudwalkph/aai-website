@@ -64,7 +64,7 @@ nav ul a {
 
 nav ul a:hover {
     background-color: transparent;
-    color: #f2a650;
+    color: #585757;
 }
 
 nav ul li.active {
@@ -244,43 +244,70 @@ footer.page-footer .footer-copyright {
 }
 
 @media only screen and (max-width: 600px) {
-  .indicators {
-    display: none;
-  }
-  .slider {
-    height : 1000px !important;
-  }
-  .slider .slides {
-    height : 1000px !important;
-  }
+
   .slider .slides li img {
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
+    height: 100%;
   }
   .rightNavi {
-    top : 38%;
+    display: none;
   }
   .leftNavi {
-    top : 38%;
+    display: none;
   }
-  .parallax img {
-    width: 340%;
-    min-height: 74%;
+  .slider .slides li .caption p {
+    margin : 15px 0;
   }
+  .brand-logo img {
+    width: 80%;
+  }
+  .slider .indicators .indicator-item {
+  	height : 8px;
+  	width : 8px;
+  }
+  .page-footer .footer-copyright .footer-text {
+  	    font-size: 11.5px;
+    	line-height: 1.7rem;
+  }
+  .page-footer .footer-copyright i {
+  	margin: 0 2px;
+  }
+  .card-action > .btn {
+	   width: 56%;
+	}
+	nav .brand-logo {
+		left: 33%;
+	}
+	.brand-logo img {
+		width: 60%;
+	}
+	.nav-wrapper {
+		transform: translateX(0) !important;
+    	width: 99% !important;
+
+	}
+	.slider {
+		position: fixed !important;
+	}
+	.serviceContentParagraph p {
+		font-size: 13.5px;
+		text-align: left;
+	}
 }
 
 @media only screen and (max-width: 768px) {
-  .indicators {
+  /*.indicators {
     display: none;
-  }
-  .slider {
+  }*/
+  /*.slider {
     height : 1000px !important;
   }
   .slider .slides {
     height : 1000px !important;
-  }
+  }*/
   .slider .slides li img {
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
   }
   .rightNavi {
@@ -295,29 +322,52 @@ footer.page-footer .footer-copyright {
 }
 
 @media only screen and (max-width: 320px) {
-  .indicators {
+  /*.indicators {
     display: none;
-  }
+  }*/
   .slider {
-    height : 700px !important;
+    height : 423px !important;
   }
   .slider .slides {
-    height : 700px !important;
+    height : 380px !important;
   }
   .slider .slides li img {
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     height: 170px;
   }
   .rightNavi {
-    top : 20%;
+    display: none;
   }
   .leftNavi {
-    top : 20%;
+    display: none;
   }
   .slider .slides li .caption p {
     margin : 15px 0;
   }
+  .brand-logo img {
+    width: 80%;
+  }
+  .slider .indicators .indicator-item {
+  	height : 8px;
+  	width : 8px;
+  }
+  .page-footer .footer-copyright .footer-text {
+  	    font-size: 11.5px;
+    	line-height: 1.7rem;
+  }
+  .page-footer .footer-copyright i {
+  	margin: 0 2px;
+  }
+  .card-action > .btn {
+	   width: 56%;
+	}
+	nav .brand-logo {
+		left: 33%;
+	}
+	.brand-logo img {
+		width: 60%;
+	}
 }
 
         

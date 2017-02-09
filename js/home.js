@@ -29,13 +29,13 @@ const Home = React.createClass({
                     ],
                     contextClass: 'flow-text',
                     contextClassMobile: 'flow-text',
-                    buttonLabel: 'Our Products and Services',
+                    buttonLabel: 'Discover',
                     buttonName: 'about'
                 },
                 {
                     captionClass: 'col s12 l4 center-align',
                     image: 'img/home/verify.jpg',
-                    imageMobile : 'img/home/verify.jpg',
+                    imageMobile : 'img/home/verifyMobile.png',
                     title: [
                         <span className="white-text"> THE FIRST TO HAVE TRULY </span>, 
                         <span className="aai_orange"> VERIFIED </span>, 
@@ -44,7 +44,7 @@ const Home = React.createClass({
                     titleMobile: [
                         <span className=""> THE FIRST TO HAVE TRULY </span>, 
                         <span className="aai_orange"> VERIFIED </span>, 
-                        <span className=""> RESULTS ON-GROUND </span>
+                        <span className=""> RESULTS <br/>ON-GROUND </span>
                     ],
                     context: [
                         <span className="white-text">We are the first agency to use VERIFY - an on-ground validation and data gathering platform that verifies the actual results and figures collected during on-ground advertising executions.</span>,
@@ -131,7 +131,6 @@ const Home = React.createClass({
 
     componentDidMount () {
         $('.slider').slider({
-            height: screen.height,
             interval : 500000
         });
     },
@@ -193,7 +192,7 @@ const Home = React.createClass({
                     </ul>
                 </div>
 
-                <div className="slider hide-on-large-only" style={{height : '100vh'}}> {/*MOBILE VIEW*/}
+                <div className="slider fullscreen hide-on-large-only"> {/*MOBILE VIEW*/}
                     <ul className="slides white">
                     { this.state.sliderData.map(function(vm,im) {
                         return (
@@ -205,7 +204,7 @@ const Home = React.createClass({
                                                 <img src={vm.imageMobile} style={{width : '100%'}} />
                                                 <span className="card-title"></span>
                                             </div>
-                                            <div className="card-content">
+                                            <div className="">
                                                 <center>
                                                     <h5 className="headline">
                                                     { vm.titleMobile.map(function(vtm, itm) {
@@ -215,13 +214,9 @@ const Home = React.createClass({
                                                     }
                                                     </h5>
                                                 </center>
-                                                { vm.contextMobile.map(function(vcm, icm) {
-                                                    return(
-                                                        <p key={icm} className={vm.contextClassMobile}>{vcm}</p>
-                                                    )
-                                                }.bind(this))}
+                                                
                                             </div>
-                                            <div className="card-action" onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
+                                            <div className="center-align" onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
                                                 <a
                                                     onClick={this.handleClick.bind(this, vm.buttonName)}
                                                     className="waves-effect waves-orange orange accent-3 btn z-depth-0"
