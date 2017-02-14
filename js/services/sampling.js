@@ -110,7 +110,7 @@ const Sampling = React.createClass({
 	                    <div className="row">
 	                        <div className="col s12 center-align valign">
 	                            <h5 className="headline">Accurate, Reliable and <span className="aai_orange">Verified</span></h5>
-	                            <img className="responsive-img" src="img/brandActivations/verify_logo.png" style={{width : '48%',marginTop : '25px'}} />
+	                            <img className="responsive-img" src="img/brandActivations/verify_logo.png" style={{width : '50%',marginTop : '25px'}} />
 	                        </div>
 	                    </div>
 	                </div>

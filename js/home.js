@@ -6,13 +6,15 @@ const Home = React.createClass({
         return {
             sliderData: [
                 {
-                    captionClass: 'col s12 l4 right center-align',
+                    captionClass: 'col s12 l4 right',
                     image: 'img/home/activations.jpg',
                     imageMobile : 'img/aai_logo.png',
                     title: [
-                        <span> Advertising that go </span>, 
-                        <span className="aai_orange"> Beyond </span>, 
-                        <span> Expectations </span>
+                    	<h4 className="headline">
+	                        <span> Advertising that go </span>
+	                        <span className="aai_orange"> Beyond </span>
+	                        <span> Expectations </span>
+                        </h4>
                     ],
                     titleMobile: [
                         <span> Advertising that go </span>, 
@@ -27,19 +29,21 @@ const Home = React.createClass({
                         'We are a full-service ad agency that specializes in creating meaningful brand experiences that bring our clients and their customers closer together.',
                         'Using efficient traditional methods enhanced by relevant innovations, we provide effective and smarter services that go beyond what\'s expected in below-the-line advertising.'
                     ],
-                    contextClass: 'flow-text',
-                    contextClassMobile: 'flow-text',
+                    contextClass: 'left-align',
+                    contextClassMobile: '',
                     buttonLabel: 'Discover',
                     buttonName: 'about'
                 },
                 {
-                    captionClass: 'col s12 l4 center-align',
+                    captionClass: 'col s12 l5',
                     image: 'img/home/verify.jpg',
                     imageMobile : 'img/home/verifyMobile.png',
                     title: [
-                        <span className="white-text"> THE FIRST TO HAVE TRULY </span>, 
-                        <span className="aai_orange"> VERIFIED </span>, 
-                        <span className="white-text"> RESULTS ON-GROUND </span>
+                    	<h4 className="headline">
+	                        <span className="white-text"> THE FIRST TO HAVE TRULY </span> 
+	                        <span className="aai_orange"> VERIFIED </span>
+	                        <span className="white-text"> RESULTS <br/>ON-GROUND </span>
+                        </h4>
                     ],
                     titleMobile: [
                         <span className=""> THE FIRST TO HAVE TRULY </span>, 
@@ -55,8 +59,8 @@ const Home = React.createClass({
                         <span className="">We are the first agency to use VERIFY - an on-ground validation and data gathering platform that verifies the actual results and figures collected during on-ground advertising executions.</span>,
                         <span className="">Thru Verify, Activations Advertising gives its clients unmatched transparency in the way it conducts its work on-ground while collecting useful data during activation or sampling runs.</span>,
                     ],
-                    contextClass: 'white-text flow-text',
-                    contextClassMobile: 'flow-text',
+                    contextClass: 'white-text left-align',
+                    contextClassMobile: '',
                     buttonLabel: 'Learn More',
                     buttonName: 'sampling'
                 },
@@ -65,29 +69,33 @@ const Home = React.createClass({
                     image: 'img/uploads/20160818_033844.jpg',
                     imageMobile : "img/uploads/20160818_033844.jpg",
                     title: [
-                        <span className="aai_orange"> AAI </span>, 
-                        <span className="white-text"> Helps Unleash the Power of </span>,
-                        <span className="aai_orange"> Samsung </span>
+	                    <h2 className="headline" style={{fontSize : '3.3rem'}}>
+	                        <span className="aai_orange"> AAI </span>
+	                        <span className="white-text"> Helps Unleash the Power of </span>
+	                        <span className="aai_orange"> Samsung </span>
+	                    </h2>
                     ],
                     titleMobile: [
                         <span className="aai_orange"> AAI </span>, 
                         <span className=""> Helps Unleash the Power of </span>,
                         <span className="aai_orange"> Samsung </span>,
                     ],
-                    context: [],
+                    context: [''],
                     contextMobile: [],
-                    contextClass: 'flow-text',
-                    contextClassMobile: 'flow-text',
+                    contextClass: '',
+                    contextClassMobile: '',
                     buttonLabel: 'Read More',
                     buttonName: 'samsung'
                 },
                 {
-                    captionClass: 'col s12 l3 right right-align',
+                    captionClass: 'col s12 l5',
                     image: 'img/home/happy_skin.jpg',
                     imageMobile : 'img/home/happy_skin.jpg',
                     title: [
-                        <span className="aai_orange"> HAPPY SKIN </span>, 
-                        <span className="white-text"> BRINGS DISNEY&rsquo;S PRINCESSES TO LIFE </span>
+                    	<h2 className="headline" style={{fontSize : '3.3rem'}}>
+	                        <span className="aai_orange"> HAPPY SKIN </span>
+	                        <span className="white-text"> BRINGS DISNEY&rsquo;S PRINCESSES TO LIFE </span>
+                        </h2>
                     ],
                     titleMobile: [
                         <span className="aai_orange"> HAPPY SKIN </span>, 
@@ -95,18 +103,20 @@ const Home = React.createClass({
                     ],
                     context: [],
                     contextMobile: [],
-                    contextClass: 'flow-text',
-                    contextClassMobile: 'flow-text',
+                    contextClass: '',
+                    contextClassMobile: '',
                     buttonLabel: 'Read More',
                     buttonName: 'happy_skin'
                 },
                 {
-                    captionClass: 'col s12 l4',
+                    captionClass: 'col s12 l5',
                     image: 'img/home/greenwich.jpg',
                     imageMobile : 'img/home/greenwich.jpg',
                     title: [
-                        <span className="aai_orange"> GREENWICH </span>, 
-                        <span className="white-text"> CROWNS A NEW ULTIMATE BANDKADA </span>
+                    	<h2 className="headline" style={{fontSize : '3.3rem'}}>
+	                        <span className="aai_orange"> GREENWICH </span>, 
+	                        <span className="white-text"> CROWNS A NEW ULTIMATE BANDKADA </span>
+                        </h2>
                     ],
                     titleMobile: [
                         <span className="aai_orange"> GREENWICH </span>, 
@@ -114,8 +124,8 @@ const Home = React.createClass({
                     ],
                     context: [],
                     contextMobile: [],
-                    contextClass: 'flow-text white-text',
-                    contextClassMobile: 'flow-text',
+                    contextClass: 'white-text',
+                    contextClassMobile: '',
                     buttonLabel: 'Read More',
                     buttonName: 'greenwich'
                 }
@@ -164,15 +174,15 @@ const Home = React.createClass({
                                 <img width="100%" src={v.image} />
 
                                 <div className="caption valign-wrapper" style={{height : '70vh'}}>
-                                    <div className="row">
+                                    <div className="row" style={{width : '100%'}}>
                                         <div className={v.captionClass}>
-                                            <h4 className="headline">
+                                            
                                             { v.title.map(function(vt, it) {
                                                 return(
                                                     <span key={it}>{vt}</span>
                                                 )})
                                             }
-                                            </h4>
+
                                             { v.context.map(function(vc, ic) {
                                                 return(
                                                     <p key={ic} className={v.contextClass}>{vc}</p>
@@ -218,7 +228,7 @@ const Home = React.createClass({
                                             </div>
                                             <div className="center-align" onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
                                                 <a
-                                                    onClick={this.handleClick.bind(this, vm.buttonName)}
+                                                    onClick={this.handleClick.bind(this, vm)}
                                                     className="waves-effect waves-orange orange accent-3 btn z-depth-0"
                                                 >{vm.buttonLabel}</a>
                                             </div>

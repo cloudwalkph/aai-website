@@ -33,13 +33,19 @@ const CardType = React.createClass({
                             <div className="card-image">
                                 <img src={this.state.article.img[0]} />
                             </div>
-                            <div className="card-content">
-                                <span className="card-title grey-text text-darken-4">
+                            <div className="card-content serviceContentParagraph">
+                                <span className="card-title grey-text text-darken-4" style={{lineHeight : '20px'}}>
                                     <b>{this.state.article.title}</b>
                                 </span>
                                 { this.state.article.context.map(function(v,i){
+                                	if(i == 0)
+                                	{
+                                		return(
+	                                        <p key={i} style={{marginTop : '20px'}}>{v}</p>
+	                                    )
+                                	}
                                     return(
-                                        <p key={i}>{v}</p>
+                                        <p key={i} style={{marginTop : '10px'}}>{v}</p>
                                     )
                                 })}
                             </div>

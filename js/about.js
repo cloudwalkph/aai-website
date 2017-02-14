@@ -69,7 +69,7 @@ const About = React.createClass({
                             backgroundPosition: 'center',
                             backgroundRepeat: 'no-repeat',
                             backgroundSize: 'cover',
-                            width : '84%'
+                            width : '100%'
                         }}
                         />
                     </div>
@@ -77,20 +77,19 @@ const About = React.createClass({
 
                 <div className="container center">
                     <div className="section">
-                        <img className="responsive-img" src="img/about/who-we-are.png"/>
+                        <img className="responsive-img" src="img/about/who-we-are.png" style={{width : '60%'}}/>
                     </div>
 
-                    <div className="section">
+                    <div className="section serviceContentParagraph">
                         <h5
                             className="headline"
                         >Going Beyond Every Time
                         </h5>
-                        <br/>
                         <p>Since 2004, we have been driven by our slogan and promise of going &ldquo;beyond expectations&rdquo; by working with passion, dedication and always going the extra mile. These, combined with our expertise, consistency and reliability have made us one of the top local agencies in our field.</p>
                         <p>Our obsession in providing only the best service to our clients has earned us the privilege of having the trust and long-lasting relationships with some of the best brands and companies in the world.</p>
                     </div>
 
-                    <div className="section">
+                    <div className="section serviceContentParagraph">
                         <h5
                             className="headline"
                         >Expertise, Experience & Innovation
@@ -100,7 +99,7 @@ const About = React.createClass({
                         <p>But we know that those high expectations can only be exceeded by continuously improving our craft thru and provide solutions to the constantly changing needs and challenges of our clients and the industry.</p>
                     </div>
 
-                    <div className="section">
+                    <div className="section serviceContentParagraph">
                         <h5
                             className="headline"
                         >OUR CLIENTS
@@ -111,7 +110,7 @@ const About = React.createClass({
 
                 </div>
                 <div className="section">&nbsp;</div>
-                <div className="container">
+                <div className="container logoWithStatus">
                     <div className="row">
                         { this.state.logos.map(function(v,i) {
                             return(

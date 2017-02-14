@@ -116,10 +116,10 @@ center {
 
 .slider .slides li .caption p {
     color: #464241;
-    text-align: justify;
-    text-justify: auto;
+    /*text-align: justify;
+    text-justify: auto;*/
     -moz-text-align-last: center; /* Code for Firefox */
-    text-align-last: center;
+    /*text-align-last: center;*/
     font-size: 15px;
 }
 
@@ -197,6 +197,14 @@ footer.page-footer .footer-copyright {
 
 .slider .indicators .indicator-item.active {
     background-color: #ff9100;
+}
+
+.headerWidth {
+	width: 91%;
+}
+
+.headerWidth img {
+	width : 70%;
 }
 
 .buttonHoverAnimate {
@@ -293,6 +301,12 @@ footer.page-footer .footer-copyright {
 	.serviceContentParagraph p {
 		font-size: 13.5px;
 		text-align: left;
+	}
+	.parallax-container .productionTranslate img {
+		transform : translate3d(-35%, 0px, 0px) !important;
+	}
+	.logoWithStatus img {
+		max-width: 120%;
 	}
 }
 

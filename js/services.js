@@ -120,12 +120,12 @@ const Services = React.createClass({
                                             <img className="responsive-img" src={value.img} />
                                             <span className="card-title"></span>
                                         </div>
-                                        <div className="card-content">
+                                        <div className="card-content serviceContentParagraph">
                                             {value.content.map(function(value, index) {
                                                 return(
                                                     <p
                                                         key={index}
-                                                        className="center-align"
+                                                        className="left-align"
                                                     >
                                                     {value}
                                                     </p>
@@ -134,6 +134,7 @@ const Services = React.createClass({
                                         </div>
                                         <div
                                             className="card-action center-align"
+                                            style={{border: 'none'}}
                                         >
                                             <a className="btn hide-on-med-and-up z-depth-0">Learn More</a>
                                         </div>

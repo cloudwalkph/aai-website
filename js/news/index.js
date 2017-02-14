@@ -36,7 +36,7 @@ const News = React.createClass({
 					</div>
 				</div>
 
-				<div>
+				<div className="hide-on-med-and-down">
 					<div className="container">
 						<div className="row">
 						{ this.state.articleData.map(function(v,i) {
@@ -49,30 +49,66 @@ const News = React.createClass({
 									onMouseLeave={this.handleMouseLeave.bind(this, i)}
 									onClick={this.handleClick.bind(this, v)}
 								>
-									<div className="card medium z-depth-0">
+									<div className="card z-depth-0">
 										<div className="card-image">
 											<img 
 												className="responsive-img"
-												style={{height: '158px'}}
 												src={v.imgFront}
 											/>
 											<span className="card-title"></span>
 										</div>
-										<div className="card-content">
-											<div className="center-align">
+										<div className="card-content serviceContentParagraph">
+											<div className="left-align">
 												<h5 
-													className="truncate"
-													style={{textTransform: 'uppercase'}}>{v.title}</h5>
+													style={{textTransform: 'uppercase',fontFamily : 'Gotham Medium'}}>{v.title}</h5>
 											</div>
 											<div>
-												<p>{v.context[0]}</p>
+												<p className="left-align">{v.context[0]}</p>
 											</div>
 										</div>
-										<div className="card-action center-align">
+										<div className="card-action center-align" style={{border : 'none'}}>
 											<a 
 												className="btn z-depth-0 hide-on-med-and-up"
 											>Read more</a>
 										</div>
+									</div>
+								</div>
+							)
+						}.bind(this))}
+						</div>
+					</div>
+				</div>
+
+				{/*MOBILE VIEW*/}
+				<div className="hide-on-large-only">
+					<div className="container">
+						<div className="row">
+						{ this.state.articleData.map(function(v,i) {
+							return(
+								<div 
+									key={i} 
+									className="col s12 m4 l4"
+									onClick={this.handleClick.bind(this, v)}
+								>
+									<div className="section">
+										<img 
+											className="responsive-img"
+											src={v.imgFront}
+										/>
+									</div>
+									<div className="section serviceContentParagraph">
+										<div className="left-align">
+											<h5
+												style={{textTransform: 'uppercase',fontFamily: 'Gotham Medium'}}>{v.title}</h5>
+										</div>
+										<div>
+											<p>{v.context[0]}</p>
+										</div>
+									</div>
+									<div className="section left-align">
+										<a 
+											className="btn z-depth-0 hide-on-med-and-up"
+										>Read more</a>
 									</div>
 								</div>
 							)

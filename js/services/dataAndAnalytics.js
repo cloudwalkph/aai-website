@@ -48,14 +48,14 @@ const DataAndAnalytics = React.createClass({
 
                 {/*SHOW MOBILE ONLY*/}
                 <div className="hide-on-large-only">
-                    <div className="row">
-                        <img src="img/dataAndAnalytics/image1.jpg" style={{width : '160%',transform: 'translate3d(-34%, 0, 0)'}} />
+                    <div className="row" style={{width : '100%',overflow : 'hidden'}}>
+                        <img src="img/dataAndAnalytics/image1.jpg" style={{width : '180%',transform: 'translate3d(-34%, 0, 0)'}} />
                     </div>
                     <div className="row">
-                        <div className="col s12 center-align valign">
+                        <div className="col s12 serviceContentParagraph valign">
                             <h5 className="headline"><span className="aai_orange">On-ground</span> knowledge and information.</h5>
-                            <p className="right-align">We provide a comprehensive and regularly updated database of important on-ground venues like malls, schools, offices, LGUs and local communities.</p>
-                            <p className="right-align">These include key information like population, demographics, foot-traffic, rates and venue measurements that will be essential in the planning and implementation of all on-ground projects.</p>
+                            <p>We provide a comprehensive and regularly updated database of important on-ground venues like malls, schools, offices, LGUs and local communities.</p>
+                            <p>These include key information like population, demographics, foot-traffic, rates and venue measurements that will be essential in the planning and implementation of all on-ground projects.</p>
                         </div>
                     </div>
                 </div>
