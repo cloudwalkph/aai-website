@@ -2,6 +2,11 @@ html {
     font-family: GillSans, Calibri, Trebuchet, sans-serif;
 }
 
+body {
+  font-family: Gotham Book;
+  color: #464646;
+}
+
 /* Sticky Footer */
 div[data-reactroot] {
     display: flex;
@@ -249,6 +254,10 @@ footer.page-footer .footer-copyright {
 
 .hide-on-med-and-up .slides li img {
   background-position: 50% !important;
+}
+
+.awardsRecognition li {
+  line-height: 1.8em;
 }
 
 @media only screen and (max-width: 600px) {
