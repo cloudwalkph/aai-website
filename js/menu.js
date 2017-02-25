@@ -8,32 +8,32 @@ const NavBar = React.createClass({
                 {
                     id: 'home',
                     page: 'Home',
-                    class: 'aai_menu waves-effect'
+                    class: 'aai_menu'
                 },
                 {
                     id: 'services',
                     page: 'Services',
-                    class: 'aai_menu waves-effect dropdown-button'
+                    class: 'aai_menu dropdown-button'
                 },
                 {
                     id: 'news',
                     page: 'News',
-                    class: 'aai_menu waves-effect'
+                    class: 'aai_menu'
                 },
                 {
                     id: 'about',
                     page: 'About',
-                    class: 'aai_menu waves-effect'
+                    class: 'aai_menu'
                 },
                 {
                     id: 'jobs',
                     page: 'Jobs',
-                    class: 'aai_menu waves-effect'
+                    class: 'aai_menu'
                 },
                 {
                     id: 'contact',
                     page: 'Contact',
-                    class: 'aai_menu waves-effect'
+                    class: 'aai_menu'
                 }
             ],
             servicesData: [
@@ -172,7 +172,6 @@ const NavBar = React.createClass({
                                 className={this.state.activeMenu == v.id ? 'active' : ''}
                             >
                                 <a 
-                                    className="waves-effect"
                                     onClick={this.selectMenu.bind(this, v.id)}
                                 >{v.page}</a>
                             </li>
